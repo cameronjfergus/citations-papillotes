@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && cp dist/angular-citations/*.js docs/angular-citations/ && cp dist/angular-citations/*.css docs/angular-citations/",
+    "build": "ng build --prod && cp dist/angular-citations/*.js docs/js/ && cp dist/angular-citations/*.css docs/css/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
