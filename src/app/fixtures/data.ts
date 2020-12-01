@@ -4,6 +4,14 @@ export const cites: CiteI[] = [];
 
 [
   {
+    cite: `On n'est jamais puni pour avoir fait mourir de rire.`,
+    author: `Proverbe chinois`
+  },
+  {
+    cite: `Il y a autant de beautés qu'il y a de manières habituelles de chercher le bonheur.`,
+    author: `Charles Baudelaire`
+  },
+  {
     cite: `Toute révélation d'un secret est la faute de celui qui l'a confié.`,
     author: `Jean de la Bruyère`
   },
