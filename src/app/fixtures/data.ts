@@ -4,6 +4,98 @@ export const cites: CiteI[] = [];
 
 [
   {
+    cite: `L'amour ne voit pas avec les yeux mais avec l'âme.`,
+    author: `William Shakespeare`
+  },
+  {
+    cite: `L'espoir, c'est rentrer sous la pluie et sortir sous un beau soleil.`,
+    author: `Proverbe africain`
+  },
+  {
+    cite: `Les folies sont les seules choses qu'on ne regrette jamais.`,
+    author: `Oscar Wilde`
+  },
+  {
+    cite: `Un des bonheurs de l'amitié c'est d'avoir à qui confier un secret.`,
+    author: `Alessandro Manzoni`
+  },
+  {
+    cite: `Un sourire est une clef secrète qui ouvre bien des coeurs.`,
+    author: `Baden-Powell`
+  },
+  {
+    cite: `On a deux vies. La deuxième commence le jour où on réalise qu'on en a juste une.`,
+    author: `Confucius`
+  },
+  {
+    cite: `Je vais être jaloux de cette tour. Elle est plus célèbre que moi.`,
+    author: `Gustave Eiffel`
+  },
+  {
+    cite: `Je me moque de savoir beaucoup de choses : je veux savoir des choses que j'aime.`,
+    author: `Jules Renard`
+  },
+  {
+    cite: `Nous portons en nous des merveilles que nous cherchons en dehors de nous.`,
+    author: `Thomas browne`
+  },
+  {
+    cite: `Là où l'on s'aime il ne fait jamais nuit.`,
+    author: `Proverbe africain`
+  },
+  {
+    cite: `Le risque de prendre une mauvaise décision n'est rien comparé à la terreur de l'indécision.`,
+    author: `Maimonide`
+  },
+  {
+    cite: `En tentant l'impossible, on peut atteindre le plus haut niveau du possible.`,
+    author: `August Strindberg`
+  },
+  {
+    cite: `Souris à la vie pour qu'elle te sourie.`,
+    author: `Proverbe tunisien`
+  },
+  {
+    cite: `Quand l'amour grandit en toi, la beauté fat de même. Car l'amour est la beauté de l'âme.`,
+    author: `Marcel Proust`
+  },
+  {
+    cite: `Le véritable voyage de découverte ne consiste pas à chercher de nouveaux paysages, mais à avoir de nouveaux yeux.`,
+    author: `Marcel Proust`
+  },
+  {
+    cite: `Dans la vie tu as deux choix le matin : soit tu te recouches pour poursuivre ton rêve, soit tu te lèves pour le réaliser.`,
+    author: `Axel Albanel`
+  },
+  {
+    cite: `Faites que le rêve dévore votre vie, afin que la vie ne dévore votre rêve.`,
+    author: `Antoine de Saint-Exupéry`
+  },
+  {
+    cite: `La nature nous a donné une langue et deux oreilles, afin que nous écoutions le double de ce que nous disons.`,
+    author: `Zénon`
+  },
+  {
+    cite: `Chaque baiser est un tremblement de terre.`,
+    author: `George Gordon Byron`
+  },
+  {
+    cite: `Un grand écrivain se remarque au nombre de pages qu'il ne publie pas.`,
+    author: `Stéphane Mallarmé`
+  },
+  {
+    cite: `Fais ce que tu aimes et fais-le souvent.`,
+    author: `Anonyme`
+  },
+  {
+    cite: `Aimer savoir est humain, savoir aimer est divin.`,
+    author: `Joseph Roux`
+  },
+  {
+    cite: `Plus le visage est sérieux, plus le sourire est beau.`,
+    author: `François René de Chateaubriand`
+  },
+  {
     cite: `On n'est jamais puni pour avoir fait mourir de rire.`,
     author: `Proverbe chinois`
   },
@@ -423,7 +515,7 @@ export const cites: CiteI[] = [];
     author: `Proverbe chinois`
   },
   {
-    cite: `Aliments. La découverte d'un mets nouveau fait plus pour le bonheur du genre humain que la découverte d'une étoile.`,
+    cite: `La découverte d'un mets nouveau fait plus pour le bonheur du genre humain que la découverte d'une étoile.`,
     author: `Brillat-Savarin`
   },
   {cite: `La science est le savoir organisé. La sagesse est la vie organisée.`, author: `Emmanuel Kant`},

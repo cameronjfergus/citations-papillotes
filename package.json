@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod && cp dist/angular-citations/*.js docs/js/ && cp dist/angular-citations/*.css docs/css/",
+    "build": "ng build --prod --baseHref /citations-papillotes/ && sed -i 's/AngularCitations/Angular Citations/g' ./docs/index.html",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
