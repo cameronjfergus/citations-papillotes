@@ -1,3 +1,7 @@
+<div>
+  {{cites.length}} Citations. <br />
+  <span *ngIf="searchFoundCites()">{{searchFoundCites()}} citations trouvées pour la recherche "{{search}}":</span>&nbsp;
+</div>
 <ul class="list">
   <li *ngFor="let item of getCites();"><cite>”{{item.cite}}”</cite> de {{item.author}}</li>
 </ul>

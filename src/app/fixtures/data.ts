@@ -3,215 +3,71 @@ import {Cite, CiteI} from '../models/Cite';
 export const cites: CiteI[] = [];
 
 [
-  {
-    cite: `L'amour ne voit pas avec les yeux mais avec l'âme.`,
-    author: `William Shakespeare`
-  },
-  {
-    cite: `L'espoir, c'est rentrer sous la pluie et sortir sous un beau soleil.`,
-    author: `Proverbe africain`
-  },
-  {
-    cite: `Les folies sont les seules choses qu'on ne regrette jamais.`,
-    author: `Oscar Wilde`
-  },
-  {
-    cite: `Un des bonheurs de l'amitié c'est d'avoir à qui confier un secret.`,
-    author: `Alessandro Manzoni`
-  },
-  {
-    cite: `Un sourire est une clef secrète qui ouvre bien des coeurs.`,
-    author: `Baden-Powell`
-  },
-  {
-    cite: `On a deux vies. La deuxième commence le jour où on réalise qu'on en a juste une.`,
-    author: `Confucius`
-  },
-  {
-    cite: `Je vais être jaloux de cette tour. Elle est plus célèbre que moi.`,
-    author: `Gustave Eiffel`
-  },
-  {
-    cite: `Je me moque de savoir beaucoup de choses : je veux savoir des choses que j'aime.`,
-    author: `Jules Renard`
-  },
-  {
-    cite: `Nous portons en nous des merveilles que nous cherchons en dehors de nous.`,
-    author: `Thomas browne`
-  },
-  {
-    cite: `Là où l'on s'aime il ne fait jamais nuit.`,
-    author: `Proverbe africain`
-  },
-  {
-    cite: `Le risque de prendre une mauvaise décision n'est rien comparé à la terreur de l'indécision.`,
-    author: `Maimonide`
-  },
-  {
-    cite: `En tentant l'impossible, on peut atteindre le plus haut niveau du possible.`,
-    author: `August Strindberg`
-  },
-  {
-    cite: `Souris à la vie pour qu'elle te sourie.`,
-    author: `Proverbe tunisien`
-  },
-  {
-    cite: `Quand l'amour grandit en toi, la beauté fat de même. Car l'amour est la beauté de l'âme.`,
-    author: `Marcel Proust`
-  },
-  {
-    cite: `Le véritable voyage de découverte ne consiste pas à chercher de nouveaux paysages, mais à avoir de nouveaux yeux.`,
-    author: `Marcel Proust`
-  },
-  {
-    cite: `Dans la vie tu as deux choix le matin : soit tu te recouches pour poursuivre ton rêve, soit tu te lèves pour le réaliser.`,
-    author: `Axel Albanel`
-  },
-  {
-    cite: `Faites que le rêve dévore votre vie, afin que la vie ne dévore votre rêve.`,
-    author: `Antoine de Saint-Exupéry`
-  },
-  {
-    cite: `La nature nous a donné une langue et deux oreilles, afin que nous écoutions le double de ce que nous disons.`,
-    author: `Zénon`
-  },
-  {
-    cite: `Chaque baiser est un tremblement de terre.`,
-    author: `George Gordon Byron`
-  },
-  {
-    cite: `Un grand écrivain se remarque au nombre de pages qu'il ne publie pas.`,
-    author: `Stéphane Mallarmé`
-  },
-  {
-    cite: `Fais ce que tu aimes et fais-le souvent.`,
-    author: `Anonyme`
-  },
-  {
-    cite: `Aimer savoir est humain, savoir aimer est divin.`,
-    author: `Joseph Roux`
-  },
-  {
-    cite: `Plus le visage est sérieux, plus le sourire est beau.`,
-    author: `François René de Chateaubriand`
-  },
-  {
-    cite: `On n'est jamais puni pour avoir fait mourir de rire.`,
-    author: `Proverbe chinois`
-  },
-  {
-    cite: `Il y a autant de beautés qu'il y a de manières habituelles de chercher le bonheur.`,
-    author: `Charles Baudelaire`
-  },
-  {
-    cite: `Toute révélation d'un secret est la faute de celui qui l'a confié.`,
-    author: `Jean de la Bruyère`
-  },
-  {
-    cite: `On voyage pour changer, non de lieu, mais d'idées.`,
-    author: `Hippolyte Taine`
-  },
-  {
-    cite: `La beauté est dans les yeux de celui qui regarde.`,
-    author: `Oscar Wilde`
-  },
-  {
-    cite: `Le plaisir est le bonheur des fous, le bonheur est le plaisir des sages.`,
-    author: `Jules Barbey d'Aurevilly`
-  },
-  {
-    cite: `La joie est en tout, il suffit de savoir l'extraire.`,
-    author: `Confucius`
-  },
-  {
-    cite: `La table est l'entremetteuse de l'amitié.`,
-    author: `Proverbe français`
-  },
-  {
-    cite: `Il n'est pas de plaisir plus doux que de surprendre un homme en lui donnant plus qu'il n'espère.`,
-    author: `Charles Baudelaire`
-  },
-  {
-    cite: `Sachez vous éloigner car, lorsque vous reviendrez à votre travail votre jugement sera plus sûr.`,
-    author: `Léonard de Vinci`
-  },
-  {
-    cite: `La bonne volonté raccorcit le chemin.`,
-    author: `Proverbe brésilien`
-  },
-  {
-    cite: `Bonne cuisine et bon vin, c'est le paradis sur terre.`,
-    author: `Henri IV`
-  },
-  {
-    cite: `La musique est la langue des émotions.`,
-    author: `Emmanuel Kant`
-  },
-  {
-    cite: `Le plaisir se ramasse la joie se cueille et le bonheur se cultive.`,
-    author: `Bouddha`
-  },
-  {
-    cite: `Quand ce que vous pensez, ce que vous dites et ce que vous faites sont en harmonie, le bonheur vous appartient.`,
-    author: `Gandhi`
-  },
-  {
-    cite: `Qui veut faire le bonheur des autres a déjà fait le sien.`,
-    author: `Proverbe chinois`
-  },
-  {
-    cite: `La sagesse, c'est d'avoir des rêves suffisamment grands pour ne pas les perdre de vue lorsqu'on les poursuit.`,
-    author: `Oscar Wilde`
-  },
+  {cite: `Chaque commencement recèle une magie cachée.`, author: `Hermann Hesse`},
+  {cite: `L'amour ne voit pas avec les yeux mais avec l'âme.`, author: `William Shakespeare`},
+  {cite: `L'espoir, c'est rentrer sous la pluie et sortir sous un beau soleil.`, author: `Proverbe africain`},
+  {cite: `Les folies sont les seules choses qu'on ne regrette jamais.`, author: `Oscar Wilde` },
+  {cite: `Un des bonheurs de l'amitié c'est d'avoir à qui confier un secret.`, author: `Alessandro Manzoni`},
+  {cite: `Un sourire est une clef secrète qui ouvre bien des coeurs.`, author: `Baden-Powell`},
+  {cite: `On a deux vies. La deuxième commence le jour où on réalise qu'on en a juste une.`, author: `Confucius`},
+  {cite: `Je vais être jaloux de cette tour. Elle est plus célèbre que moi.`, author: `Gustave Eiffel`},
+  {cite: `Je me moque de savoir beaucoup de choses : je veux savoir des choses que j'aime.`, author: `Jules Renard`},
+  {cite: `Nous portons en nous des merveilles que nous cherchons en dehors de nous.`, author: `Thomas browne`},
+  {cite: `Là où l'on s'aime il ne fait jamais nuit.`, author: `Proverbe africain`},
+  {cite: `Le risque de prendre une mauvaise décision n'est rien comparé à la terreur de l'indécision.`, author: `Maimonide`},
+  {cite: `En tentant l'impossible, on peut atteindre le plus haut niveau du possible.`, author: `August Strindberg`},
+  {cite: `Souris à la vie pour qu'elle te sourie.`, author: `Proverbe tunisien`},
+  {cite: `Quand l'amour grandit en toi, la beauté fat de même. Car l'amour est la beauté de l'âme.`, author: `Marcel Proust`},
+  {cite: `Le véritable voyage de découverte ne consiste pas à chercher de nouveaux paysages, mais à avoir de nouveaux yeux.`, author: `Marcel Proust`},
+  {cite: `Dans la vie tu as deux choix le matin : soit tu te recouches pour poursuivre ton rêve, soit tu te lèves pour le réaliser.`, author: `Axel Albanel`},
+  {cite: `Faites que le rêve dévore votre vie, afin que la vie ne dévore votre rêve.`, author: `Antoine de Saint-Exupéry`},
+  {cite: `La nature nous a donné une langue et deux oreilles, afin que nous écoutions le double de ce que nous disons.`, author: `Zénon`},
+  {cite: `Chaque baiser est un tremblement de terre.`, author: `George Gordon Byron`},
+  {cite: `Un grand écrivain se remarque au nombre de pages qu'il ne publie pas.`, author: `Stéphane Mallarmé`},
+  {cite: `Fais ce que tu aimes et fais-le souvent.`, author: `Anonyme`},
+  {cite: `Aimer savoir est humain, savoir aimer est divin.`, author: `Joseph Roux`},
+  {cite: `Plus le visage est sérieux, plus le sourire est beau.`, author: `François René de Chateaubriand`},
+  {cite: `On n'est jamais puni pour avoir fait mourir de rire.`, author: `Proverbe chinois`},
+  {cite: `Il y a autant de beautés qu'il y a de manières habituelles de chercher le bonheur.`, author: `Charles Baudelaire`},
+  {cite: `Toute révélation d'un secret est la faute de celui qui l'a confié.`, author: `Jean de la Bruyère`},
+  {cite: `On voyage pour changer, non de lieu, mais d'idées.`, author: `Hippolyte Taine`},
+  {cite: `La beauté est dans les yeux de celui qui regarde.`, author: `Oscar Wilde`},
+  {cite: `Le plaisir est le bonheur des fous, le bonheur est le plaisir des sages.`, author: `Jules Barbey d'Aurevilly`},
+  {cite: `La joie est en tout, il suffit de savoir l'extraire.`, author: `Confucius`},
+  {cite: `La table est l'entremetteuse de l'amitié.`, author: `Proverbe français`},
+  {cite: `Il n'est pas de plaisir plus doux que de surprendre un homme en lui donnant plus qu'il n'espère.`, author: `Charles Baudelaire`},
+  {cite: `Sachez vous éloigner car, lorsque vous reviendrez à votre travail votre jugement sera plus sûr.`, author: `Léonard de Vinci`},
+  {cite: `Parfois on ne perçoit l'amour ca la vie quotidienne peut nous rendre aveugle.`, author: `Anonyme`},
+  {cite: `La bonne volonté raccorcit le chemin.`, author: `Proverbe brésilien`},
+  {cite: `Bonne cuisine et bon vin, c'est le paradis sur terre.`, author: `Henri IV`},
+  {cite: `La musique est la langue des émotions.`, author: `Emmanuel Kant`},
+  {cite: `Le plaisir se ramasse la joie se cueille et le bonheur se cultive.`, author: `Bouddha`},
+  {cite: `Quand ce que vous pensez, ce que vous dites et ce que vous faites sont en harmonie, le bonheur vous appartient.`, author: `Gandhi`},
+  {cite: `Qui veut faire le bonheur des autres a déjà fait le sien.`, author: `Proverbe chinois`},
+  {cite: `La sagesse, c'est d'avoir des rêves suffisamment grands pour ne pas les perdre de vue lorsqu'on les poursuit.`,author: `Oscar Wilde`},
   {cite: `Eclaire demain avec aujourd'hui !`, author: `Elizabeth Barret Browning`},
-  {
-    cite: `Maison de paille où l'on rit vaut mieux qu'un palais où l'on pleure.`,
-    author: `Proverbe chinois`
-  },
+  {cite: `Maison de paille où l'on rit vaut mieux qu'un palais où l'on pleure.`, author: `Proverbe chinois`},
   {cite: `Toute l'invention consiste à faire quelque chose de rien.`, author: `Jean Racine`},
   {cite: `L'idéal de l'amitié c'est de se sentir un et de rester deux.`, author: `Anne Sophie Swetchine`},
   {cite: `Un seul homme armé de courage vaut une majorité.`, author: `Andrew Jackson`},
-  {
-    cite: `La Tour Eiffel ne devait durer que 20 ans, ... elle est devenue aussi éternelle que Paris !`,
-    author: ``
-  },
+  {cite: `La Tour Eiffel ne devait durer que 20 ans, ... elle est devenue aussi éternelle que Paris !`, author: `Anonyme`},
+  {cite: `Peu importe où nous sommes, ma maison n'est pas un lieu, ma maison c'est toi.`, author: `Fynn Kliemann-Accueil`},
   {cite: `Un peu de jalousie éveille un amour heureux qui s'endort.`, author: `Mme Deshoulières`},
   {cite: `La simplicité est la sophistication suprême.`, author: `Léonard de Vinci`},
-  {
-    cite: `Quelque délicat que l'on soit en amour, on pardonne plus de fautes que dans l'amitié.`,
-    author: `Jean de La Bruyère`
-  },
-  {
-    cite: `Le travail, en autres avantages, a celui de raccourcir les journées et d'étendre la vie.`,
-    author: `Denis Diderot`
-  },
+  {cite: `Quelque délicat que l'on soit en amour, on pardonne plus de fautes que dans l'amitié.`, author: `Jean de La Bruyère`},
+  {cite: `Le travail, en autres avantages, a celui de raccourcir les journées et d'étendre la vie.`, author: `Denis Diderot`},
   {cite: `Si nous prenons la nature pour guide, nous ne nous égarerons jamais.`, author: `Cicéron`},
   {cite: `L'accent circonflexe est l'hirondelle de l'écriture.`, author: `Jules Renard`},
   {cite: `L'accent est l'âme du discours, il lui donne le sentiment et la vérité.`, author: `Jean-Jacques Rousseau`},
-  {
-    cite: `La lutte donne au triomphe la saveur de la passion, et la victoire embellit la conquête.`,
-    author: `Georges Meredith`
-  },
-  {
-    cite: `Jamais les mots ne manquent aux îdées ; ce sont les îdées qui manquent aux mots.`,
-    author: `Joseph Joubert`
-  },
+  {cite: `La lutte donne au triomphe la saveur de la passion, et la victoire embellit la conquête.`, author: `Georges Meredith`},
+  {cite: `Jamais les mots ne manquent aux îdées ; ce sont les îdées qui manquent aux mots.`, author: `Joseph Joubert`},
   {cite: `L'âge auquel on partage tout est généralement l'âge où on n'a rien.`, author: `Alphonse Karr`},
   {cite: `Une erreur originale vaut mieux qu'une vérité banale.`, author: `Fiodor Dostoïevski`},
-  {
-    cite: `Le veinard est celui qui arrive à tout ; le malchanceux est celui à qui tout arrive.`,
-    author: `Eugène Labiche`
-  },
+  {cite: `Le veinard est celui qui arrive à tout ; le malchanceux est celui à qui tout arrive.`, author: `Eugène Labiche`},
   {cite: `Il n'y a pas de moyen pour polir le hérisson.`, author: `Aristophane`},
   {cite: `L'amour qui naît subitement est le plus long à guérir.`, author: `Jean de La Bruyère`},
-  {
-    cite: `J'aime le lit, c'est le seul endroit où, comme le chat, je puis faire le mort en respirant, tout en étant vivant.`,
-    author: `Arthur Cravan`
-  },
-  {
-    cite: `Pour l'amour d'une rose, le jardinier devient l'esclave de mille épines.`,
-    author: `Proverbe turc`
-  },
+  {cite: `J'aime le lit, c'est le seul endroit où, comme le chat, je puis faire le mort en respirant, tout en étant vivant.`, author: `Arthur Cravan`},
+  {cite: `Pour l'amour d'une rose, le jardinier devient l'esclave de mille épines.`, author: `Proverbe turc`},
   {
     cite: `Déploie ton jeune courage, enfant ; c'est ainsi qu'on s'élève jusqu'aux astres.`,
     author: `Virgile`
@@ -268,6 +124,8 @@ export const cites: CiteI[] = [];
     cite: `Si haut que parvienne une chose lancée, c'est à terre qu'elle retourne.`,
     author: `Proverbe africain`
   },
+  {cite: `Pour faire du bien, personne n'a besoin de réfléchir.`, author: `Johann Wolfgang Von Goethe`},
+  {cite: `L'âme porte les couleurs de tes pensées.`, author: `Marc Aurel`},
   {cite: `Tout âge porte ses fruits, il faut savoir les cueillir.`, author: `Raymond Radiguet`},
   {cite: `Nul devoir n'est plus sous-estimé que celui d'être heureux.`, author: `R. L. Stevenson`},
   {cite: `Peu de gens ont le courage d'être lâches devant témoins.`, author: `Théophile Gautier`},
@@ -333,6 +191,7 @@ export const cites: CiteI[] = [];
     cite: `On ne doit pas juger du mérite d'un homme par ses grandes qualités, mais par l'usage qu'il en sait faire.`,
     author: `Jean de La Bruyère`
   },
+  {cite: `Apprenons à tendre la main pas seulement pour recevoir, mais également pour donner.`, author: `Wembo Jah Olela`},
   {cite: `J'ai décidé d'être heureux, c'est meilleur pour la santé.`, author: `Voltaire`},
   {cite: `Toute beauté est une joie éternelle.`, author: `John Keats`},
   {cite: `Un seul être vous manque et tout est dépeuplé.`, author: `Alphonse de Lamartine`},
@@ -376,10 +235,7 @@ export const cites: CiteI[] = [];
   {cite: `Pour savoir où l'on va, il faut savoir où l'on est.`, author: `Proverbe tchadien`},
   {cite: `Sans la musique, la vie serait une erreur.`, author: `F. Nietzsche`},
   {cite: `Un homme sans culture, tel un chat sans moustaches, se sent perdu.`, author: `Anonyme`},
-  {
-    cite: `La science décrit la nature, la poésie la peint et l'embellit.`,
-    author: `Georges-Louis Leclerc de Buffon`
-  },
+  {cite: `La science décrit la nature, la poésie la peint et l'embellit.`, author: `Georges-Louis Leclerc de Buffon`},
   {
     cite: `Une fleur fane même si on l'aime ; une mauvaise herbe croît même si on ne l'aime pas.`,
     author: `Dôgen`
@@ -421,7 +277,12 @@ export const cites: CiteI[] = [];
   {cite: `On se sert des couleurs, mais on peint avec le sentiment.`, author: `Jean Chardin`},
   {
     cite: `Nous pesons rarement dans la même balance des offenses que nous faisons et les offenses que l'on nous fait.`,
-    author: `Esope`},
+    author: `Esope`
+  },
+  {
+    cite: `Rarement nous pensons à ce que nous avons, mais souvent à ce qui nous manque.`,
+    author: `Arthur Schopenhauer`
+  },
   {
     cite: `Il faut toujours se réserver le droit de rire le lendemain de ses îdées de la veille.`,
     author: `Napoléon Bonaparte`
@@ -478,9 +339,14 @@ export const cites: CiteI[] = [];
     author: `Proverbe celtique`
   },
   {
+    cite: `Aimez les yeux ouverts.`,
+    author: `Titre d'un livre de Jorge Bucay`
+  },
+  {
     cite: `Une fleur fane même si on l'aime ; une mauvaise herbe croit même si on ne l'aime pas.`,
     author: `Dögen`
   },
+  {cite: `Comme le dauphin j'ai le dos fin.`, author: `Maître Reiki Kanak`},
   {cite: `Lire, c'est voyager ; voyager, c'est lire.`, author: `Victor Hugo`},
   {cite: `Un roman, c'est un miroir qu'on promène le long du chemin.`, author: `Stendhal`},
   {cite: `Il n'est pas de plus lourd fardeau que d'avoir trop de désirs.`, author: `Lao Zi`},

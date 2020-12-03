@@ -26,4 +26,12 @@ export class ListCitesComponent {
         );
     });
   }
+
+  searchFoundCites(): number {
+    if (this.cites.length !== this.getCites().length) {
+      return this.getCites().length;
+    }
+
+    return 0;
+  }
 }
