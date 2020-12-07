@@ -3,6 +3,7 @@ import {fromEvent, Subject} from 'rxjs';
 import {debounceTime, map, takeUntil, tap} from 'rxjs/operators';
 import {CiteI} from './models/Cite';
 import {cites} from './fixtures/data';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,13 +13,15 @@ import {cites} from './fixtures/data';
 export class AppComponent implements AfterViewInit, OnDestroy {
   @ViewChild('elSearchCite', {static: true}) elSearchCite: ElementRef;
   title = 'Citations';
-  search: string;
   cites: CiteI[] = cites;
   isLoading = false;
 
   // Memory leak prevention: better implementation than an array of Subscription on which we wll loop over (3 steps documented here)
   // #1 the properties that will clear Observable
   protected ngUnsubscribe: Subject<void> = new Subject();
+
+  constructor(protected router: Router) {
+  }
 
   // #2 the event on whhich we will complete the main Observable property
   ngOnDestroy(): any {
@@ -40,11 +43,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
       tap(() => this.isLoading = false),
     ).subscribe(
       next => {
-        this.search = next;
+        this.router.navigate(['/all'], { queryParams: {search: next}});
       });
-  }
-
-  getCount(): number {
-    return this.cites.length;
   }
 }

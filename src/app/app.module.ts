@@ -3,22 +3,27 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListCitesComponent } from './components/list-cites/list-cites.component';
+import {HomeComponent} from './components/home/home.component';
+import {PageNotFoundComponent} from './components/pageNotFound/page-not-found.component';
+import {Cites} from './services/Cites';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListCitesComponent
+    HomeComponent,
+    ListCitesComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ClarityModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    Cites
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

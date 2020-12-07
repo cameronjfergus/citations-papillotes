@@ -1,37 +1,32 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {cites} from '../../fixtures/data';
 import {CiteI} from '../../models/Cite';
+import {ActivatedRoute, Router, RouterState} from '@angular/router';
+import {Cites} from '../../services/Cites';
 
 @Component({
   selector: 'app-list-cites',
   templateUrl: './list-cites.component.html',
   styleUrls: ['./list-cites.component.scss']
 })
-export class ListCitesComponent {
-  @Input() search: string;
+export class ListCitesComponent implements OnInit {
+  search: string;
   cites: CiteI[] = cites;
 
-  constructor() { }
+  constructor(protected route: ActivatedRoute, public citeService: Cites) { }
 
-  getCites(): CiteI[] {
-    return this.cites.filter(item => {
-      if (!this.search) {
-        return true;
+  ngOnInit(): void {
+    this.citeService.cites$.subscribe(next => console.log('debug', next));
+
+
+    this.route.queryParamMap.subscribe(params => {
+      if (!params.get('search')) {
+        this.citeService.reset();
+        return;
       }
 
-      return item
-        && (
-          item.cite.toLowerCase().includes(this.search.toLowerCase())
-          || item.author.toLowerCase().includes(this.search.toLowerCase())
-        );
+      this.search = params.get('search');
+      this.citeService.search(this.search);
     });
-  }
-
-  searchFoundCites(): number {
-    if (this.cites.length !== this.getCites().length) {
-      return this.getCites().length;
-    }
-
-    return 0;
   }
 }

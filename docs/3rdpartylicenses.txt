@@ -7,22 +7,10 @@ MIT
 @angular/core
 MIT
 
-@angular/forms
-MIT
-
 @angular/platform-browser
 MIT
 
 @angular/router
-MIT
-
-@clr/angular
-MIT
-
-@clr/icons
-MIT
-
-@clr/ui
 MIT
 
 css-loader

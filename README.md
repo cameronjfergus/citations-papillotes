@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
+Usage of TailwindCSS with the help of this : https://medium.com/@jacobneterer/angular-and-tailwindcss-2388fb6e0bab
+To install Tailwind, follow https://camerondwyer.com/2020/07/09/using-tailwind-css-in-an-angular-cli-app/ 
+Take care woz you will need to install postcss@8, because by default it installs v7 (https://stackoverflow.com/questions/63858991/how-to-setup-tailwind-for-a-new-angular-project)
+Also follow this https://fullyunderstood.com/get-started-with-angular-tailwind-css/ because it helps to reduce the the size of styles (the tailwind.config.js is the solution)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

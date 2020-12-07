@@ -1,29 +1,60 @@
-<style>
+<div class="h-screen pb-14 bg-right bg-cover" style="background-image:url('assets/bg.svg');">
+  <!--Nav-->
+  <div class="w-full container mx-auto p-6">
 
-</style>
-
-<div class="main-container">
-  <header class="header header-6">
-    <div class="branding">
-      <a href="javascript:void(0)">
-        <clr-icon shape="block-quote"></clr-icon>
-        <span class="title">{{title}}</span>
+    <div class="w-full flex items-center justify-between">
+      <a class="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#">
+        <svg version="1.1" width="36" height="36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path d="M11.86,16.55a4.31,4.31,0,0,0-2.11.56,14.44,14.44,0,0,1,4.36-6,1.1,1.1,0,0,0-1.4-1.7c-4,3.25-5.78,7.75-5.78,10.54A5.08,5.08,0,0,0,10,24.58a4.4,4.4,0,0,0,1.88.44,4.24,4.24,0,1,0,0-8.47Z"></path><path d="M23,16.55a4.29,4.29,0,0,0-2.11.56,14.5,14.5,0,0,1,4.35-6,1.1,1.1,0,1,0-1.39-1.7c-4,3.25-5.78,7.75-5.78,10.54a5.08,5.08,0,0,0,3,4.61A4.37,4.37,0,0,0,23,25a4.24,4.24,0,1,0,0-8.47Z"></path>
+          <rect x="0" y="0" width="36" height="36" fill-opacity="0"/>
+        </svg>Citations
       </a>
+
+      <div class="flex w-1/2 justify-end content-center">
+        <a routerLink="/" class="inline-block text-blue-300 no-underline hover:text-indigo-800 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4">
+          <svg version="1.1" width="36" height="36"  viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M33.71,17.29l-15-15a1,1,0,0,0-1.41,0l-15,15a1,1,0,0,0,1.41,1.41L18,4.41,32.29,18.71a1,1,0,0,0,1.41-1.41Z"></path><path d="M28,32h-5V22H13V32H8V18L6,20V32a2,2,0,0,0,2,2h7V24h6V34h7a2,2,0,0,0,2-2V19.76l-2-2Z"></path>
+            <rect x="0" y="0" width="36" height="36" fill-opacity="0"/>
+          </svg>
+        </a>
+        <a routerLink="/all" [queryParams]="" class="inline-block text-blue-300 no-underline hover:text-indigo-800 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 ">
+          <svg version="1.1" width="36" height="36"  viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M29.29,5H27V7h2V32H7V7H9V5H7A1.75,1.75,0,0,0,5,6.69V32.31A1.7,1.7,0,0,0,6.71,34H29.29A1.7,1.7,0,0,0,31,32.31V6.69A1.7,1.7,0,0,0,29.29,5Z" ></path><path d="M26,7.33A2.34,2.34,0,0,0,23.67,5H21.87a4,4,0,0,0-7.75,0H12.33A2.34,2.34,0,0,0,10,7.33V11H26ZM24,9H12V7.33A.33.33,0,0,1,12.33,7H16V6a2,2,0,0,1,4,0V7h3.67a.33.33,0,0,1,.33.33Z"></path><rect x="11" y="14" width="14" height="2"></rect><rect x="11" y="18" width="14" height="2"></rect><rect x="11" y="22" width="14" height="2"></rect><rect x="11" y="26" width="14" height="2"></rect>
+            <rect x="0" y="0" width="36" height="36" fill-opacity="0"/>
+          </svg>
+        </a>
+        <a class="inline-block text-blue-300 no-underline hover:text-indigo-800 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4">
+          <svg version="1.1" width="36" height="36"  viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M16.33,5.05A10.95,10.95,0,1,1,5.39,16,11,11,0,0,1,16.33,5.05m0-2.05a13,13,0,1,0,13,13,13,13,0,0,0-13-13Z"></path><path d="M35,33.29l-7.37-7.42-1.42,1.41,7.37,7.42A1,1,0,1,0,35,33.29Z"></path>
+            <rect x="0" y="0" width="36" height="36" fill-opacity="0"/>
+          </svg>
+        </a>
+        <input class="inline-block text-blue-300 no-underline hover:text-indigo-800 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4" id="search_input" type="text" placeholder="Rechercher..." #elSearchCite>
+      </div>
+
     </div>
-    <div class="header-nav">
-      <form class="search">
-        <label for="search_input">
-          <input id="search_input" type="text" placeholder="Rechercher..." #elSearchCite>
-        </label>
-      </form>
-    </div>
-  </header>
-  <div class="content-container">
-    <div class="content-area">
-      <app-list-cites [search]="search"></app-list-cites>
+
+  </div>
+
+  <!--Main-->
+  <div class="container pt-24 md:pt-48 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+
+    <!--Left Col-->
+    <div class="flex flex-col w-full xl:w-3/5 justify-center lg:items-start overflow-y-hidden">
       <router-outlet></router-outlet>
     </div>
+
+    <!--Right Col-->
+    <div class="w-full xl:w-2/5 py-6 overflow-y-hidden">
+
+    </div>
+
+    <!--Footer-->
+    <div class="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
+      <a class="text-gray-500 no-underline hover:no-underline" href="#">&copy; Rebolon 2020</a>
+    </div>
+
   </div>
+
+
 </div>
-
-
