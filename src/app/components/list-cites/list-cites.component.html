@@ -1,11 +1,11 @@
 <h1 class="my-4 text-3xl md:text-5xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">
-  {{cites.length}} Citations.
+  {{citeService.countSearchFoundCites()}} Citations.
 </h1>
-<h2 *ngIf="citeService.countSearchFoundCites()">
-  {{citeService.countSearchFoundCites()}} citations trouvées pour la recherche "{{search}}":&nbsp;
+<h2 *ngIf="search">
+  {{cites.length}} citations trouvées pour la recherche "{{search}}":&nbsp;
 </h2>
 
 <ul class="list">
-  <li *ngFor="let item of citeService.cites$ | async;"><cite>”{{item.cite}}”</cite> de {{item.author}}</li>
+  <li *ngFor="let item of cites;"><cite>”{{item.cite}}”</cite> de {{item.author}}</li>
 </ul>
 
