@@ -1,8 +1,11 @@
 import {Cite, CiteI} from '../models/Cite';
+import {from, Observable, of} from 'rxjs';
+import {map, switchMap, toArray} from 'rxjs/operators';
 
-export const cites: CiteI[] = [];
-
-[
+/**
+ * This file should be only imported from Service Cites tht will simulate a DataStore
+ */
+const data: {cite: string, author: string}[] = [
   {cite: `Chaque commencement recèle une magie cachée.`, author: `Hermann Hesse`},
   {cite: `L'amour ne voit pas avec les yeux mais avec l'âme.`, author: `William Shakespeare`},
   {cite: `L'espoir, c'est rentrer sous la pluie et sortir sous un beau soleil.`, author: `Proverbe africain`},
@@ -22,6 +25,7 @@ export const cites: CiteI[] = [];
   {cite: `Le véritable voyage de découverte ne consiste pas à chercher de nouveaux paysages, mais à avoir de nouveaux yeux.`, author: `Marcel Proust`},
   {cite: `Dans la vie tu as deux choix le matin : soit tu te recouches pour poursuivre ton rêve, soit tu te lèves pour le réaliser.`, author: `Axel Albanel`},
   {cite: `Faites que le rêve dévore votre vie, afin que la vie ne dévore votre rêve.`, author: `Antoine de Saint-Exupéry`},
+  {cite: `Deviens sans cesse celui que tu es, sois le maître et le sculpteur de toi-même.`, author: `Nietzsche`},
   {cite: `La nature nous a donné une langue et deux oreilles, afin que nous écoutions le double de ce que nous disons.`, author: `Zénon`},
   {cite: `Chaque baiser est un tremblement de terre.`, author: `George Gordon Byron`},
   {cite: `Un grand écrivain se remarque au nombre de pages qu'il ne publie pas.`, author: `Stéphane Mallarmé`},
@@ -37,6 +41,7 @@ export const cites: CiteI[] = [];
   {cite: `Le plaisir est le bonheur des fous, le bonheur est le plaisir des sages.`, author: `Jules Barbey d'Aurevilly`},
   {cite: `La joie est en tout, il suffit de savoir l'extraire.`, author: `Confucius`},
   {cite: `La table est l'entremetteuse de l'amitié.`, author: `Proverbe français`},
+  {cite: `Le génie, c'est l'enfance retrouvée à volonté.`, author: `Charles Baudelaire`},
   {cite: `Le remède à l'ennui c'est la curiosité. La curiosité elle, est sans remède.`, author: `Anonyme`},
   {cite: `Il n'est pas de plaisir plus doux que de surprendre un homme en lui donnant plus qu'il n'espère.`, author: `Charles Baudelaire`},
   {cite: `Sachez vous éloigner car, lorsque vous reviendrez à votre travail votre jugement sera plus sûr.`, author: `Léonard de Vinci`},
@@ -44,11 +49,11 @@ export const cites: CiteI[] = [];
   {cite: `La bonne volonté raccorcit le chemin.`, author: `Proverbe brésilien`},
   {cite: `Bonne cuisine et bon vin, c'est le paradis sur terre.`, author: `Henri IV`},
   {cite: `La musique est la langue des émotions.`, author: `Emmanuel Kant`},
-  {cite: `Les mots manques aux émotions.`, author: `Victor Hugo`},
+  {cite: `Les mots manquent aux émotions.`, author: `Victor Hugo`},
   {cite: `Le plaisir se ramasse la joie se cueille et le bonheur se cultive.`, author: `Bouddha`},
   {cite: `Quand ce que vous pensez, ce que vous dites et ce que vous faites sont en harmonie, le bonheur vous appartient.`, author: `Gandhi`},
   {cite: `Qui veut faire le bonheur des autres a déjà fait le sien.`, author: `Proverbe chinois`},
-  {cite: `La sagesse, c'est d'avoir des rêves suffisamment grands pour ne pas les perdre de vue lorsqu'on les poursuit.`,author: `Oscar Wilde`},
+  {cite: `La sagesse, c'est d'avoir des rêves suffisamment grands pour ne pas les perdre de vue lorsqu'on les poursuit.`, author: `Oscar Wilde`},
   {cite: `Eclaire demain avec aujourd'hui !`, author: `Elizabeth Barret Browning`},
   {cite: `Maison de paille où l'on rit vaut mieux qu'un palais où l'on pleure.`, author: `Proverbe chinois`},
   {cite: `Toute l'invention consiste à faire quelque chose de rien.`, author: `Jean Racine`},
@@ -72,6 +77,7 @@ export const cites: CiteI[] = [];
   {cite: `Le veinard est celui qui arrive à tout ; le malchanceux est celui à qui tout arrive.`, author: `Eugène Labiche`},
   {cite: `Il n'y a pas de moyen pour polir le hérisson.`, author: `Aristophane`},
   {cite: `L'amour qui naît subitement est le plus long à guérir.`, author: `Jean de La Bruyère`},
+  {cite: `Un grain de gaieté assaisonne tout.`, author: `Baltasar Gracian`},
   {cite: `J'aime le lit, c'est le seul endroit où, comme le chat, je puis faire le mort en respirant, tout en étant vivant.`, author: `Arthur Cravan`},
   {cite: `Le seul homme à ne jamais faire d'erreur est celui qui ne fait rien.`, author: `Théodore Roosevelt`},
   {cite: `Le plus grand voyageur est celui qui a su faire une fois le tour de lui-même.`, author: `Confucius`},
@@ -89,10 +95,14 @@ export const cites: CiteI[] = [];
   {cite: `La puissance, c'est imposer sa volonté aux autres. La force, c'est se l'imposer à soi-même.`, author: `Lao Zi`},
   {cite: `A Noël, je n'ai pas plus envie de rose que je ne voudrais de neige au printemps. J'aime chaque saison pour ce qu'elle apporte.`, author: `William Shakespeare`},
   {cite: `Le meilleur secret pour ne jamais tomber c'est de rester toujours assis.`, author: `Stendhal`},
+  {cite: `Pour retrouver sa jeunesse, il n'y a qu'à recommencer ses folies.`, author: `Théodore Roosevelt`},
+  {cite: `Il y a toujours un peu de folie dans l'amour mais il y a toujours un peu de raison dans la folie.`, author: `Nietzsche`},
   {cite: `Ne juge aucun homme avant d'avoir marché avec ses mocassins durant deux lunes.`, author: `Proverbe amérindien`},
   {cite: `Vous ne parviendrez jamais à faire des sages si vous ne faites d'abord des polissons.`, author: `Jean-Jacques Rousseau`},
   {cite: `Ce qui étonne, étonne une fois, mais ce qui est admirable est de plus en plus admiré.`, author: `Joseph Joubert`},
   {cite: `Ce qui est admirable, ce n'est pas que le champ des étoiles soit si vaste, c'est que l'homme l'ait mesuré.`, author: `Anatole France`},
+  {cite: `La mesure de l'amour c'est d'aimer sans mesure.`, author: `Saint-Augustin`},
+  {cite: `Il n'est pas d'hiver sans neige, de printemps sans soleil, et de joie sans être partagée.`, author: `Proverbe serbe`},
   {cite: `Les plus beaux mots du monde ne sont que des sons inutiles si vous ne pouvez pas les comprendre.`, author: `Anatole France`},
   {cite: `Si haut que parvienne une chose lancée, c'est à terre qu'elle retourne.`, author: `Proverbe africain`},
   {cite: `Pour faire du bien, personne n'a besoin de réfléchir.`, author: `Johann Wolfgang Von Goethe`},
@@ -104,6 +114,7 @@ export const cites: CiteI[] = [];
   {cite: `L'or te donne la terre, la terre te donne de l'or.`, author: `Proverbe indien`},
   {cite: `Le regard est le médiateur des coeurs.`, author: `Anonyme`},
   {cite: `En art comme en amour, l'instinct suffit.`, author: `Anatole France`},
+  {cite: `Le cadeau, dira-t-on, n'a rien de somptueux, mais venant d'un ami, tout nous est précieux.`, author: `Théocrite`},
   {cite: `La franchise ne consiste pas à dire tout ce que l'on pense mais à penser tout ce que l'on dit.`, author: `Proverbe tchadien`},
   {cite: `Les petits cadeaux entretiennent l'amitié. Le premier qui a dit dela voulait se faire donner quelque chose.`, author: `Eugène Scribe`},
   {cite: `Les premiers sentiments sont toujours les plus naturels.`, author: `Madame de Sévigné`},
@@ -140,12 +151,15 @@ export const cites: CiteI[] = [];
   {cite: `Quiconque a bu une tasse de chocolat résiste à une journée de voyage.`, author: `Johann Wolfgang Von Goethe`},
   {cite: `Dis-toi d'abord ce que tu veux être, puis fais ce qu'il faut pour le devenir.`, author: `Epictète`},
   {cite: `L'art est une démonstration dont la nature est la preuve.`, author: `Georges Sand`},
+  {cite: `L'art d'être tantôt très audacieux et tantôt très prudent est l'art de réussir.`, author: `Napoléon Bonaparte`},
   {cite: `L'art de l'écrivain consiste surtout à nous faire oublier qu'il emploie des mots.`, author: `Henri Bergson`},
   {cite: `Le désordre est simplement l'ordre que nous ne cherchons pas.`, author: `Henri Bergson`},
+  {cite: `L'homme devrait mettre autant d'ardeur à simplifier sa vie qu'il en met à la compliquer.`, author: `Henri Bergson`},
   {cite: `Le défaut de l'égalité, c'est que nous ne la voulons qu'avec nos supérieurs.`, author: `Henri Becquet`},
   {cite: `Papillon, ce billet doux plié cherche une adresse de fleur.`, author: `Jules Renard`},
   {cite: `Si vous voulez que vos rêves se réalisent, ne dormez pas.`, author: `Proverbe juif`},
   {cite: `Si les cieux pleurent, la terre vivra.`, author: `Proverbe hawaiien`},
+  {cite: `Nul n'est plus chanceux que celui qui croit à sa chance.`, author: `Proverbe allemand`},
   {cite: `Tout ce que tu feras sera dérisoire, mais il est essentiel que tu le fasses.`, author: `Gandhi`},
   {cite: `La rose n'a d'épines que pour celui qui veut la cueillir.`, author: `Proverbe chinois`},
   {cite: `Pour savoir où l'on va, il faut savoir où l'on est.`, author: `Proverbe tchadien`},
@@ -158,6 +172,7 @@ export const cites: CiteI[] = [];
   {cite: `Qui donne ne doit jamais s'en souvenir. Qui reçoit ne doit jamais oublier.`, author: `Proverbe hébreu`},
   {cite: `Une fois la partie terminée, le roi et le pion retournent dans la même boîte.`, author: `Proverbe italien`},
   {cite: `Bien être : état d'esprit produit par la contemplation des ennuis d'autrui.`, author: `Ambrose Bierce`},
+  {cite: `La vie, ce n'est pas d'attendre que l'orage passe, c'est d'apprendre à danser sous la pluie.`, author: `Sénèque`},
   {cite: `Accepter l'îdée d'une défaite, c'est être vaincu.`, author: `Maréchal Foch`},
   {cite: `Parmi les cinq sens, la vue, l'ouïe et l'odorat connaissent moins d'interdits que le toucher et le goût.`, author: `Léonard de Vinci`},
   {cite: `On n'a jamais fait de grande découverte sans hypothèse audacieuse.`, author: `Léonard de Vinci`},
@@ -179,7 +194,9 @@ export const cites: CiteI[] = [];
   {cite: `Toute ascension vers un endroit merveilleux se fait par un escalier en spirale.`, author: `François Bacon`},
   {cite: `La nature fait les hommes semblables, la vie les rend différents.`, author: `Confucius`},
   {cite: `Une heure de conversation vaut mieux que cinquante lettres.`, author: `Madame de Sévigné`},
+  {cite: `Sabot qui brille n'est pas toujours celui qui chausse le mieux.`, author: `Proverbe français`},
   {cite: `Ce qui est haïssable, ne le fait pas à ton prochain ; c'est là toute la loi. Le reste n'est que commentaire.`, author: `R. Hillel`},
+  {cite: `Un rire sincère est un rayon de soleil dans une maison.`, author: `William Thackeray`},
   {cite: `Je ne te dis pas que tu es un bon à rien, je te dis que tu es mauvais en tout !`, author: `Le schpountz`},
   {cite: `Trouver n'est rien, c'est le plan qui est difficile.`, author: `Fiodor Dostoïevski`},
   {cite: `La modestie est le meilleur appât pour aller à la pêche aux compliments.`, author: `Gilbert Keith Chersterton`},
@@ -198,6 +215,7 @@ export const cites: CiteI[] = [];
   {cite: `La nuit n'est peut-être que la paupière du jour.`, author: `Omar Khayyâm`},
   {cite: `Le parfait bonheur ne consiste qu'à rendre les hommes heureux.`, author: `Jean-Baptiste Rousseau`},
   {cite: `Le soir de la vie apporte avec soi sa lampe.`, author: `Joseph Joubert`},
+  {cite: `Il n'y a point de chemin vers le bonheur, le bonheur est le chemin.`, author: `Lao Tseu`},
   {cite: `Ne fais rien dans ta vie, qui te fasse redouter que ton voisin en prenne connaissance.`, author: `Epicure`},
   {cite: `Qu'on me donne six heures pour couper un arbre, j'en passerai quatre à préparer ma hache.`, author: `Abraham Lincoln`},
   {cite: `Notre plus grande gloire n'est pas de ne jamais tomber, mais de nous relever chaque fois.`, author: `Confucius`},
@@ -205,14 +223,21 @@ export const cites: CiteI[] = [];
   {cite: `Chaque coup de colère est un coup de vieux, chaque sourire est un coup de jeune.`, author: `Proverbe chinois`},
   {cite: `La découverte d'un mets nouveau fait plus pour le bonheur du genre humain que la découverte d'une étoile.`, author: `Brillat-Savarin`},
   {cite: `La science est le savoir organisé. La sagesse est la vie organisée.`, author: `Emmanuel Kant`},
-].forEach((item: CiteI) => {
-  if (cites.map(itemOfCites => itemOfCites.cite).includes(item.cite)) {
-    return;
-  }
+];
 
-  const cite = (new Cite())
-    .setCite(item.cite)
-    .setAuthor(item.author);
-
-  cites.push(cite);
-});
+// Because RxJs is the life, so we don't export array, but an Observable. It will be used by the service to share data with the application
+export const cites: Observable<CiteI[]> = of(data)
+  .pipe(
+      // filter to prevent duplicated rows
+      map(next => next.filter((item: CiteI) => next.map(itemOfCites => itemOfCites.cite).includes(item.cite))),
+      // switch into a stream of item instead of one stream of items
+      switchMap(next => from(next)),
+      // transform each item into a Cite Object
+      map(next => {
+          return (new Cite())
+              .setCite(next.cite)
+              .setAuthor(next.author);
+      }),
+      // restore into one stream of items
+      toArray()
+  );

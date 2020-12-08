@@ -1,26 +1,48 @@
-import {BehaviorSubject, Observable} from 'rxjs';
+import {BehaviorSubject, EMPTY, from, Observable, of} from 'rxjs';
 import {cites} from '../fixtures/data';
 import {CiteI} from '../models/Cite';
-import {distinct, filter} from 'rxjs/operators';
+import {distinct, filter, map, switchMap, tap, toArray} from 'rxjs/operators';
 import {Injectable} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import * as rfdc from 'rfdc';
 
 @Injectable()
 export class Cites {
-  protected cites: BehaviorSubject<CiteI[]> = new BehaviorSubject(cites);
+  protected originalCites: CiteI[] = [];
+  protected cites: BehaviorSubject<CiteI[]> = new BehaviorSubject<CiteI[]>(null);
   public cites$: Observable<CiteI[]> = this.cites.asObservable()
     .pipe(
       filter(value => !!value),
+      // this is for a kind of immutability: if something push/pop/shift/... the CiteI[] it won't alter every subcriber that has saved the data
+      map(next => rfdc()(next)),
       distinct()
     );
+  // local cache for the counter
+  protected count = 0;
 
-  public reset(): void {
-    this.cites.next(cites);
+  public constructor(protected router: ActivatedRoute) {
+    cites.pipe(
+      tap(next => this.originalCites = next),
+      switchMap(() => this.reset())
+    ).subscribe();
   }
 
-  public search(search: string): void {
-    this.cites.next(
-      cites.filter(item => {
-        if (!this.search) {
+  public reset(): Observable<CiteI[]> {
+    return of(this.originalCites).pipe(
+      filter(value => !!value),
+      tap(next => this.cites.next(next))
+    );
+  }
+
+  public search(search: string): Observable<CiteI[]> {
+    if (!this.cites.getValue()) {
+      return EMPTY;
+    }
+
+    return of(this.cites.getValue()).pipe(
+      switchMap(next => from(next)),
+      filter(item => {
+        if (!search) {
           return true;
         }
 
@@ -29,15 +51,22 @@ export class Cites {
             item.cite.toLowerCase().includes(search.toLowerCase())
             || item.author.toLowerCase().includes(search.toLowerCase())
           );
-      })
+      }),
+      toArray(),
     );
   }
 
   countSearchFoundCites(): number {
-    if (cites.length !== this.cites.getValue().length) {
-      return this.cites.getValue().length;
+    // if there is a pending Search
+    if (this.router.snapshot.queryParams
+      && this.router.snapshot.queryParams.search) {
+      return this.count;
     }
 
-    return 0;
+    if (this.originalCites) {
+      this.count = this.originalCites.length;
+    }
+
+    return this.count;
   }
 }

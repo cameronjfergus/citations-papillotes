@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {cites} from '../../fixtures/data';
 import {CiteI} from '../../models/Cite';
+import {combineAll, count, map} from 'rxjs/operators';
+import {Cites} from '../../services/Cites';
+import {combineLatest} from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +12,12 @@ import {CiteI} from '../../models/Cite';
 export class HomeComponent implements OnInit {
   cite: CiteI;
 
+  constructor(protected citesService: Cites) {
+  }
+
   ngOnInit(): void {
-    this.cite = cites[Math.floor(Math.random() * cites.length)];
+    this.citesService.cites$.subscribe(next => {
+      this.cite = next[Math.floor(Math.random() * next.length)];
+    });
   }
 }

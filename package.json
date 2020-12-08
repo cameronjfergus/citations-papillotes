@@ -21,6 +21,7 @@
     "@angular/router": "~10.2.0",
     "@webcomponents/webcomponentsjs": "^2.0.0",
     "postcss": "^8.1.13",
+    "rfdc": "^1.1.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

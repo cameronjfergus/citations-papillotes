@@ -1,29 +1,39 @@
-import {AfterViewInit, Component, ElementRef, OnDestroy, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {fromEvent, Subject} from 'rxjs';
 import {debounceTime, map, takeUntil, tap} from 'rxjs/operators';
 import {CiteI} from './models/Cite';
-import {cites} from './fixtures/data';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit, OnDestroy {
+export class AppComponent implements AfterViewInit, OnInit, OnDestroy {
   @ViewChild('elSearchCite', {static: true}) elSearchCite: ElementRef;
   title = 'Citations';
-  cites: CiteI[] = cites;
   isLoading = false;
+
 
   // Memory leak prevention: better implementation than an array of Subscription on which we wll loop over (3 steps documented here)
   // #1 the properties that will clear Observable
   protected ngUnsubscribe: Subject<void> = new Subject();
 
-  constructor(protected router: Router) {
+  constructor(protected activatedRouter: ActivatedRoute, protected router: Router) {
   }
 
-  // #2 the event on whhich we will complete the main Observable property
+  ngOnInit(): any {
+    // reset search input when route change
+    this.activatedRouter.queryParamMap.subscribe(params => {
+      if (!params.get('search')) {
+        this.elSearchCite.nativeElement.value = '';
+
+        return;
+      }
+    });
+  }
+
+  // #2 the event on which we will complete the main Observable property
   ngOnDestroy(): any {
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
@@ -36,14 +46,12 @@ export class AppComponent implements AfterViewInit, OnDestroy {
       // #3 the function that will stop the Observable because of the complete event from Observable property
       takeUntil(this.ngUnsubscribe),
       tap(() => this.isLoading = true),
-      map((event: Event) => {
-        return (event.currentTarget as HTMLInputElement).value;
-      }),
+      map((event: Event) => (event.currentTarget as HTMLInputElement).value),
       debounceTime(500),
       tap(() => this.isLoading = false),
     ).subscribe(
       next => {
-        this.router.navigate(['/all'], { queryParams: {search: next}});
+        this.router.navigate(['/search'], { queryParams: {search: next}});
       });
   }
 }
