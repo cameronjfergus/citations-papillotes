@@ -7,11 +7,12 @@ import {tap} from 'rxjs/operators';
 @Component({
   selector: 'app-list-cites',
   templateUrl: './list-cites.component.html',
-  styleUrls: ['./list-cites.component.scss']
+  styleUrls: []
 })
 export class ListCitesComponent implements OnInit {
-  search: string;
+  q: string;
   cites: CiteI[] = [];
+  protected currentPage: number;
 
   constructor(protected route: ActivatedRoute, public citeService: Cites) { }
 
@@ -19,16 +20,15 @@ export class ListCitesComponent implements OnInit {
     this.citeService.cites$.subscribe((next: CiteI[]) => this.fillCites(next));
 
     this.route.queryParamMap.subscribe(params => {
-      if (!params.get('search')) {
+      if (!params.get('q')) {
         this.citeService.reset().subscribe();
 
         return;
       }
 
-      this.search = params.get('search');
-      this.citeService.search(this.search).pipe(
-        tap(next => this.fillCites(next)),
-        tap(next => console.log(next))
+      this.q = params.get('q');
+      this.citeService.search(this.q).pipe(
+        tap(next => this.fillCites(next))
       ).subscribe();
     });
   }
@@ -36,5 +36,13 @@ export class ListCitesComponent implements OnInit {
   protected fillCites(citesList): void {
     this.cites = [];
     citesList.forEach(cite => this.cites.push(cite));
+  }
+
+  getCurrentPage(): number {
+    return this.currentPage;
+  }
+
+  setCurrentPage(event): void {
+    this.currentPage = event;
   }
 }

@@ -1,0 +1,9 @@
+<h1 class="text-5xl lg:text-6xl font-bold text-teal-600 mb-2 lg:mb-6">
+  {{authors?.length}} Auteurs.
+</h1>
+
+<ul class="list">
+  <li *ngFor="let item of authors | paginate: { itemsPerPage: 10, currentPage: getCurrentPage() };"><a routerLink="/search" [queryParams]="{q: item}">{{item}}</a></li>
+</ul>
+
+<pagination-controls (pageChange)="setCurrentPage($event)"></pagination-controls>

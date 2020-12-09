@@ -8,18 +8,22 @@ import { ListCitesComponent } from './components/list-cites/list-cites.component
 import {HomeComponent} from './components/home/home.component';
 import {PageNotFoundComponent} from './components/pageNotFound/page-not-found.component';
 import {Cites} from './services/Cites';
+import {NgxPaginationModule} from 'ngx-pagination';
+import {ListAuthorsComponent} from './components/list-authors/list-authors.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ListCitesComponent,
+    ListAuthorsComponent,
     PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxPaginationModule,
   ],
   providers: [
     Cites

@@ -59,7 +59,7 @@ export class Cites {
   countSearchFoundCites(): number {
     // if there is a pending Search
     if (this.router.snapshot.queryParams
-      && this.router.snapshot.queryParams.search) {
+      && this.router.snapshot.queryParams.q) {
       return this.count;
     }
 

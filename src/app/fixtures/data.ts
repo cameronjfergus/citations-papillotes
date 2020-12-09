@@ -46,11 +46,12 @@ const data: {cite: string, author: string}[] = [
   {cite: `Il n'est pas de plaisir plus doux que de surprendre un homme en lui donnant plus qu'il n'espère.`, author: `Charles Baudelaire`},
   {cite: `Sachez vous éloigner car, lorsque vous reviendrez à votre travail votre jugement sera plus sûr.`, author: `Léonard de Vinci`},
   {cite: `Parfois on ne perçoit l'amour ca la vie quotidienne peut nous rendre aveugle.`, author: `Anonyme`},
-  {cite: `La bonne volonté raccorcit le chemin.`, author: `Proverbe brésilien`},
+  {cite: `La bonne volonté raccourcit le chemin.`, author: `Proverbe brésilien`},
   {cite: `Bonne cuisine et bon vin, c'est le paradis sur terre.`, author: `Henri IV`},
   {cite: `La musique est la langue des émotions.`, author: `Emmanuel Kant`},
   {cite: `Les mots manquent aux émotions.`, author: `Victor Hugo`},
   {cite: `Le plaisir se ramasse la joie se cueille et le bonheur se cultive.`, author: `Bouddha`},
+  {cite: `Que ton baiser ait l'ardeur du soleil et la rose te donnera tout son parfum.`, author: `Proverbe kurde`},
   {cite: `Quand ce que vous pensez, ce que vous dites et ce que vous faites sont en harmonie, le bonheur vous appartient.`, author: `Gandhi`},
   {cite: `Qui veut faire le bonheur des autres a déjà fait le sien.`, author: `Proverbe chinois`},
   {cite: `La sagesse, c'est d'avoir des rêves suffisamment grands pour ne pas les perdre de vue lorsqu'on les poursuit.`, author: `Oscar Wilde`},
@@ -199,6 +200,7 @@ const data: {cite: string, author: string}[] = [
   {cite: `Un rire sincère est un rayon de soleil dans une maison.`, author: `William Thackeray`},
   {cite: `Je ne te dis pas que tu es un bon à rien, je te dis que tu es mauvais en tout !`, author: `Le schpountz`},
   {cite: `Trouver n'est rien, c'est le plan qui est difficile.`, author: `Fiodor Dostoïevski`},
+  {cite: `LE monde ne mourra jamais par manque de merveilles mais uniquement par manque d'émerveillement.`, author: `Gilbert Keith Chersterton`},
   {cite: `La modestie est le meilleur appât pour aller à la pêche aux compliments.`, author: `Gilbert Keith Chersterton`},
   {cite: `Une civilisation me parait se définir à la fois pas des questions qu'elle pose et par celles qu'elle ne pose pas.`, author: `André Malraux`},
   {cite: `Si vous voulez que la vie vous sourie, apportez-lui d'abord votre bonne humeur.`, author: `Spinoza`},
@@ -230,7 +232,7 @@ export const cites: Observable<CiteI[]> = of(data)
   .pipe(
       // filter to prevent duplicated rows
       map(next => next.filter((item: CiteI) => next.map(itemOfCites => itemOfCites.cite).includes(item.cite))),
-      // switch into a stream of item instead of one stream of items
+      // switch into a stream of item instead of one stream of an array of items
       switchMap(next => from(next)),
       // transform each item into a Cite Object
       map(next => {
