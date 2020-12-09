@@ -23,9 +23,9 @@ export class AppComponent implements AfterViewInit, OnInit, OnDestroy {
   }
 
   ngOnInit(): any {
-    // reset search input when route change
+    // reset q input when route change
     this.activatedRouter.queryParamMap.subscribe(params => {
-      if (!params.get('search')) {
+      if (!params.get('q')) {
         this.elSearchCite.nativeElement.value = '';
 
         return;
@@ -51,7 +51,7 @@ export class AppComponent implements AfterViewInit, OnInit, OnDestroy {
       tap(() => this.isLoading = false),
     ).subscribe(
       next => {
-        this.router.navigate(['/search'], { queryParams: {search: next}});
+        this.router.navigate(['/search'], { queryParams: {q: next}});
       });
   }
 }

@@ -7,7 +7,7 @@ import {combineLatest} from 'rxjs';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: []
 })
 export class HomeComponent implements OnInit {
   cite: CiteI;
