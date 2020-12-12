@@ -23,6 +23,7 @@ export class Cites {
   public constructor(protected router: ActivatedRoute) {
     cites.pipe(
       tap(next => this.originalCites = next),
+      tap(next => this.count = next.length),
       switchMap(() => this.reset())
     ).subscribe();
   }
