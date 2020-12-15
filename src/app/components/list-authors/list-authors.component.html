@@ -2,8 +2,9 @@
   {{authors?.length}} Auteurs.
 </h1>
 
+<!-- pagination on top of cites coz i don't find a way for instance to set a fixed height for cites and put pagination after (for instance the pager moves in height with the number of rows in the cites) -->
+<pagination-controls (pageChange)="setCurrentPage($event)" class="p-8"></pagination-controls>
+
 <ul class="list">
   <li *ngFor="let item of authors | paginate: { itemsPerPage: 10, currentPage: getCurrentPage() };"><a routerLink="/search" [queryParams]="{q: item}">{{item}}</a></li>
 </ul>
-
-<pagination-controls (pageChange)="setCurrentPage($event)"></pagination-controls>
