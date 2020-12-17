@@ -2,15 +2,15 @@
   <a routerLink="/cites" [queryParams]="">{{citeService.countSearchFoundCites()}} Citations.</a>
 </h1>
 
-<!-- pagination on top of cites coz i don't find a way for instance to set a fixed height for cites and put pagination after (for instance the pager moves in height with the number of rows in the cites) -->
-<pagination-controls (pageChange)="setCurrentPage($event)" class="p-8"></pagination-controls>
-
 <h2 *ngIf="q" class="text-md lg:text-2xl text-gray-600" [ngPlural]="cites.length">
   <ng-template ngPluralCase="=0">Aucune citation trouvée pour la recherche "{{q}}"&nbsp;</ng-template>
   <ng-template ngPluralCase="=1">{{cites.length}} citation trouvée pour la recherche "{{q}}":&nbsp;</ng-template>
   <ng-template ngPluralCase="other">{{cites.length}} citations trouvées pour la recherche "{{q}}":&nbsp;</ng-template>
 </h2>
 
-<ul class="list">
-  <li *ngFor="let item of cites | paginate: { itemsPerPage: 10, currentPage: getCurrentPage() };"><cite>”{{item.cite}}”</cite> de <a routerLink="/search" [queryParams]="{q: item.author}">{{item.author}}</a></li>
+<ul class="list-none">
+  <li class="p-1" *ngFor="let item of cites | paginate: { itemsPerPage: 10, currentPage: getCurrentPage() };"><cite>”{{item.cite}}”</cite> de <a routerLink="/search" [queryParams]="{q: item.author}">{{item.author}}</a></li>
 </ul>
+
+<!-- pagination on top of cites coz i don't find a way for instance to set a fixed height for cites and put pagination after (for instance the pager moves in height with the number of rows in the cites) -->
+<pagination-controls (pageChange)="setCurrentPage($event)" class="p-8"></pagination-controls>

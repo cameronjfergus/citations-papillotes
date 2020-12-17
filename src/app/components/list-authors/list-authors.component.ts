@@ -11,7 +11,7 @@ import {from} from 'rxjs';
   styleUrls: []
 })
 export class ListAuthorsComponent implements OnInit {
-  authors: string[] = [];
+  authors: { author: string, counter: number }[] = [];
   protected currentPage: number;
 
   constructor(protected route: ActivatedRoute, public citeService: Cites) { }
@@ -20,9 +20,36 @@ export class ListAuthorsComponent implements OnInit {
     this.citeService.cites$.pipe(
       switchMap(next => from(next)),
       map(next => next.author),
-      distinct(),
-      tap(next => this.authors.includes(next) ? null : this.authors.push(next))
-    ).subscribe();
+      tap(next => {
+        if (!this.authors.find(item => item.author === next)) {
+          this.authors.push({author: next, counter: 1});
+        } else {
+          const index = this.authors.findIndex(item => item.author === next);
+          this.authors[index].counter = this.authors[index].counter + 1;
+        }
+      })
+    ).subscribe(next => this.authors.sort((a, b) => {
+      const aParts = a.author.split(' ');
+      const bParts = b.author.split(' ');
+      const aLastname = aParts.length > 1 ? aParts.pop() : aParts.shift();
+      const bLastname = bParts.length > 1 ? bParts.pop() : bParts.shift();
+
+      if (aLastname < bLastname) {
+        return -1;
+      } else if (aLastname > bLastname) {
+        return 1;
+      } else {
+        if (a[0] < b[0]) {
+          return -1;
+        } else if (a[0] > b[1]) {
+          return 1;
+        }
+
+        return 0;
+      }
+
+      return 0;
+    }));
   }
 
   getCurrentPage(): number {

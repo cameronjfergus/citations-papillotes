@@ -1,7 +1,6 @@
 import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {fromEvent, Subject} from 'rxjs';
 import {debounceTime, map, takeUntil, tap} from 'rxjs/operators';
-import {CiteI} from './models/Cite';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -13,7 +12,6 @@ export class AppComponent implements AfterViewInit, OnInit, OnDestroy {
   @ViewChild('elSearchCite', {static: true}) elSearchCite: ElementRef;
   title = 'Citations';
   isLoading = false;
-
 
   // Memory leak prevention: better implementation than an array of Subscription on which we wll loop over (3 steps documented here)
   // #1 the properties that will clear Observable
