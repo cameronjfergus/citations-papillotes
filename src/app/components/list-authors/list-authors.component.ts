@@ -32,16 +32,18 @@ export class ListAuthorsComponent implements OnInit {
       const aParts = a.author.split(' ');
       const bParts = b.author.split(' ');
       const aLastname = aParts.length > 1 ? aParts.pop() : aParts.shift();
+      const aFirstname = aParts[0];
       const bLastname = bParts.length > 1 ? bParts.pop() : bParts.shift();
+      const bFirstname = bParts[0];
 
       if (aLastname < bLastname) {
         return -1;
       } else if (aLastname > bLastname) {
         return 1;
       } else {
-        if (a[0] < b[0]) {
+        if (aFirstname < bFirstname) {
           return -1;
-        } else if (a[0] > b[1]) {
+        } else if (aFirstname > bFirstname) {
           return 1;
         }
 

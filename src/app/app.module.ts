@@ -10,6 +10,7 @@ import {PageNotFoundComponent} from './components/pageNotFound/page-not-found.co
 import {Cites} from './services/Cites';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {ListAuthorsComponent} from './components/list-authors/list-authors.component';
+import {SearchComponent} from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {ListAuthorsComponent} from './components/list-authors/list-authors.compo
     HomeComponent,
     ListCitesComponent,
     ListAuthorsComponent,
+    SearchComponent,
     PageNotFoundComponent
   ],
   imports: [
