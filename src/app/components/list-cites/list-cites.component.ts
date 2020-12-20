@@ -13,7 +13,7 @@ export class ListCitesComponent implements OnInit {
   q: string;
   cites: CiteI[] = [];
   protected currentPage: number;
-  protected itemsPerPage: 10;
+  protected itemsPerPage = 10;
 
   constructor(protected route: ActivatedRoute, public citeService: Cites) { }
 

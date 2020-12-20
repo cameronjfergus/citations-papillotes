@@ -13,7 +13,7 @@ import {from} from 'rxjs';
 export class ListAuthorsComponent implements OnInit {
   authors: { author: string, counter: number }[] = [];
   protected currentPage: number;
-  protected itemsPerPage: 10;
+  protected itemsPerPage = 10;
 
   constructor(protected route: ActivatedRoute, public citeService: Cites) { }
 
