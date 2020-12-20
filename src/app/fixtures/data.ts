@@ -28,6 +28,7 @@ const data: {cite: string, author: string}[] = [
   {cite: `Le véritable voyage de découverte ne consiste pas à chercher de nouveaux paysages, mais à avoir de nouveaux yeux.`, author: `Marcel Proust`},
   {cite: `Dans la vie tu as deux choix le matin : soit tu te recouches pour poursuivre ton rêve, soit tu te lèves pour le réaliser.`, author: `Axel Albanel`},
   {cite: `La diplomatie, c'est faire et dire les plus vilaines choses de la manière la plus élégante.`, author: `Isaac Goldberg`},
+  {cite: `Choisissez un travail que vous aimez et vous n'aurez pas à travailler un seul jour de votre vie.`, author: `Confucius`},
   {cite: `L'imagination vaut bien des voyages et elle coûte moins cher.`, author: `George William Curtis`},
   {cite: `Faites que le rêve dévore votre vie, afin que la vie ne dévore votre rêve.`, author: `Antoine de Saint-Exupéry`},
   {cite: `Deviens sans cesse celui que tu es, sois le maître et le sculpteur de toi-même.`, author: `Nietzsche`},
