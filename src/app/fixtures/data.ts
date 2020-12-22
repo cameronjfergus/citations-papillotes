@@ -281,6 +281,7 @@ const data: {cite: string, author: string}[] = [
   {cite: `La découverte d'un mets nouveau fait plus pour le bonheur du genre humain que la découverte d'une étoile.`, author: `Brillat-Savarin`},
   {cite: `La science est le savoir organisé. La sagesse est la vie organisée.`, author: `Emmanuel Kant`},
 ];
+let index = 0;
 
 // Because RxJs is the life, so we don't export array, but an Observable. It will be used by the service to share data with the application
 export const cites: Observable<CiteI[]> = of(data)
@@ -292,6 +293,7 @@ export const cites: Observable<CiteI[]> = of(data)
       // transform each item into a Cite Object
       map(next => {
           return (new Cite())
+              .setId(index++)
               .setCite(next.cite)
               .setAuthor(next.author);
       }),

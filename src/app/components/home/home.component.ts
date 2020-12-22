@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CiteI} from '../../models/Cite';
-import {combineAll, count, map} from 'rxjs/operators';
 import {Cites} from '../../services/Cites';
-import {combineLatest} from 'rxjs';
 
 @Component({
   selector: 'app-home',
