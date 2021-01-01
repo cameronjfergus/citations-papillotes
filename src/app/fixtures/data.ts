@@ -88,6 +88,7 @@ const data: {cite: string, author: string}[] = [
   {cite: `Qui veut faire le bonheur des autres a déjà fait le sien.`, author: `Proverbe chinois`},
   {cite: `La sagesse, c'est d'avoir des rêves suffisamment grands pour ne pas les perdre de vue lorsqu'on les poursuit.`, author: `Oscar Wilde`},
   {cite: `Eclaire demain avec aujourd'hui !`, author: `Elizabeth Barret Browning`},
+  {cite: `Apprends à écrire tes blessures dans le sable et à graver tes joies dans la pierre.`, author: `Lao Tseu`},
   {cite: `Maison de paille où l'on rit vaut mieux qu'un palais où l'on pleure.`, author: `Proverbe chinois`},
   {cite: `Toute l'invention consiste à faire quelque chose de rien.`, author: `Jean Racine`},
   {cite: `L'idéal de l'amitié c'est de se sentir un et de rester deux.`, author: `Anne Sophie Swetchine`},
