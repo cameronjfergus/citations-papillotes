@@ -169,7 +169,6 @@ const data: {cite: string, author: string}[] = [
   {cite: `La franchise ne consiste pas à dire tout ce que l'on pense mais à penser tout ce que l'on dit.`, author: `Proverbe tchadien`},
   {cite: `Les petits cadeaux entretiennent l'amitié. Le premier qui a dit dela voulait se faire donner quelque chose.`, author: `Eugène Scribe`},
   {cite: `Les premiers sentiments sont toujours les plus naturels.`, author: `Madame de Sévigné`},
-  {cite: `Les grandes choses peuvent se manifester par de petits signes.`, author: `Sigmund Freud`},
   {cite: `Qui ne peut comme il veut, doit vouloir comme il peut.`, author: `Térence`},
   {cite: `Etre jeune, c'est avoir un esprit qui calcule et un coeur qui ne calcule pas.`, author: `René Bazin`},
   {cite: `La séduction suprême n'est pas d'exprimer ses sentiments. C'est de les faire soupçonner.`, author: `Barbey d'Aurevilly`},
