@@ -104,6 +104,7 @@ const data: {cite: string, author: string}[] = [
   {cite: `L'émotion artistique cesse où l'analyse et la pensée interviennent.`, author: `Max Jacob`},
   {cite: `La pensée n'est qu'un éclair au milieu de la nuit. Mais c'est cet éclair qui est tout.`, author: `Henri Poincaré`},
   {cite: `L'accent est l'âme du discours, il lui donne le sentiment et la vérité.`, author: `Jean-Jacques Rousseau`},
+  {cite: `La crainte du danger est mille fois plus terrifiante que le danger présent.`, author: `Daniel Defoe`},
   {cite: `La lutte donne au triomphe la saveur de la passion, et la victoire embellit la conquête.`, author: `Georges Meredith`},
   {cite: `De toutes les passions, la seule vraiment respectable me parait être la gourmandise.`, author: `Guy de Maupassant`},
   {cite: `Jamais les mots ne manquent aux idées ; ce sont les idées qui manquent aux mots.`, author: `Joseph Joubert`},
