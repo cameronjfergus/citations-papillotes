@@ -114,6 +114,7 @@ const data: {cite: string, author: string}[] = [
   {cite: `Il n'y a pas de moyen pour polir le hérisson.`, author: `Aristophane`},
   {cite: `L'amour qui naît subitement est le plus long à guérir.`, author: `Jean de La Bruyère`},
   {cite: `Un grain de gaieté assaisonne tout.`, author: `Baltasar Gracian`},
+  {cite: `Qui rougit est déjà coupable, la vraie innocence n'a honte de rien.`, author: `Jean-Jacques Rousseau`},
   {cite: `Il n'y a point de génie sans grain de folie.`, author: `Aristote`},
   {cite: `J'aime le lit, c'est le seul endroit où, comme le chat, je puis faire le mort en respirant, tout en étant vivant.`, author: `Arthur Cravan`},
   {cite: `Le seul homme à ne jamais faire d'erreur est celui qui ne fait rien.`, author: `Théodore Roosevelt`},
