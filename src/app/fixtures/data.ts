@@ -5,7 +5,7 @@ import {map, switchMap, toArray} from 'rxjs/operators';
 /**
  * This file should be only imported from Service Cites tht will simulate a DataStore
  */
-const data: {cite: string, author: string}[] = [
+const data: {cite: string, author: string, tags?: [string]}[] = [
   {cite: `Chaque commencement recèle une magie cachée.`, author: `Hermann Hesse`},
   {cite: `Rarement nous pensons à ce que nous avons, mais souvent à ce qui nous manque.`, author: `Arthur Schopenhauer`},
   {cite: `Comme le dauphin j'ai le dos fin.`, author: `Maître Reiki Kanak`},
@@ -305,6 +305,8 @@ const data: {cite: string, author: string}[] = [
   {cite: `Chaque coup de colère est un coup de vieux, chaque sourire est un coup de jeune.`, author: `Proverbe chinois`},
   {cite: `La découverte d'un mets nouveau fait plus pour le bonheur du genre humain que la découverte d'une étoile.`, author: `Brillat-Savarin`},
   {cite: `La science est le savoir organisé. La sagesse est la vie organisée.`, author: `Emmanuel Kant`},
+  {cite: `Si je rêve tout seul, cela reste un rêve. Si nous rêvons ensemble, c'est le début de la réalité.`, author: `Proverbe persan`, tags: ['pensées positives']},
+  {cite: `Il n'est pas de joie qui égale celle de se créer de nouvelles amitiés.`, author: `Proverbe chinois`, tags: ['pensées positives']},
 ];
 let index = 0;
 
