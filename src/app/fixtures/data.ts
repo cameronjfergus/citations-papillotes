@@ -235,6 +235,7 @@ const data: {cite: string, author: string, tags?: [string]}[] = [
   {cite: `Si les cieux pleurent, la terre vivra.`, author: `Proverbe hawaiien`},
   {cite: `Les rêves d'un chat sont peuplés de souris.`, author: `Proverbe libanais`},
   {cite: `Nul n'est plus chanceux que celui qui croit à sa chance.`, author: `Proverbe allemand`},
+  {cite: `On peut aussi bâtir quelque chose de beau avec les pierres qui entravent le chemin.`, author: `Johann Wolfgang Von Goethe`},
   {cite: `Tout ce que tu feras sera dérisoire, mais il est essentiel que tu le fasses.`, author: `Gandhi`},
   {cite: `La rose n'a d'épines que pour celui qui veut la cueillir.`, author: `Proverbe chinois`},
   {cite: `Chaque homme cache en lui un enfant qui veut jouer..`, author: `Friederich Nietzsche`},
