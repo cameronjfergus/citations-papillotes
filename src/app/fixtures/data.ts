@@ -11,7 +11,7 @@ const data: {cite: string, author: string, tags?: [string]}[] = [
   {cite: `Comme le dauphin j'ai le dos fin.`, author: `Maître Reiki Kanak`},
   {cite: `L'âme porte les couleurs de tes pensées.`, author: `Marc Aurèle`},
   {cite: `Apprenons à tendre la main pas seulement pour recevoir, mais également pour donner.`, author: `Wembo Jah Olela`},
-  {cite: `Peu importe où nous sommes, ma maison n'est pas un lieu, ma maison c'est toi.`, author: `Fynn Kliemann-Accueil`},
+  {cite: `Peu importe où nous sommes, ma maison n'est pas un lieu, ma maison c'est toi.`, author: `Fynn Kliemann`},
   {cite: `Pour faire du bien, personne n'a besoin de réfléchir.`, author: `Johann Wolfgang Von Goethe`},
   {cite: `Il n'y a que deux façons de vivre sa vie : l'une en faisant comme si rien n'était un miracle, l'uatre en faisant comme si tout était un miracle.`, author: `Albert Einstein`},
   {cite: `La faculté de se mettre dans la peau des autres et de réfléchir à la manière dont on agirait à leur place est très utile si on veut apprendre à aimer quelqu'un.`, author: `Dalai Lama`},
