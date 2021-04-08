@@ -10,6 +10,8 @@ With Angular 10.2.0, tailwindcss requires thoses steps to run finely :
 
 But with Angular 11.2, it's more simpler and there is no more needs to al these hacks (thanks for them coz it really helped me on those times).
 
+In the last few days, i also added the package @angular/pwa to allow ther lighthouse benchmark to improve the notation.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
