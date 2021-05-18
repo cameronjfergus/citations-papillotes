@@ -1,0 +1,4 @@
+<h1 *ngIf="cite" class="my-4 text-3xl md:text-5xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">
+  {{cite.cite}}
+</h1>
+<p *ngIf="cite" class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle"><a routerLink="/search" [queryParams]="{q: cite.author}">{{cite.author}}</a></p>

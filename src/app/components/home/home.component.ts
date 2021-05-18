@@ -15,7 +15,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.citesService.cites$.subscribe(next => {
-      this.cite = next[Math.floor(Math.random() * next.length)];
+      const today = new Date();
+      const firstDayOfYear = new Date(today.getFullYear(), 0, 0);
+      const dayOfYear = Math.floor((today.getTime() - firstDayOfYear.getTime()) / 1000 / 60 / 60 / 24);
+
+      this.cite = next[dayOfYear];
     });
   }
 }
