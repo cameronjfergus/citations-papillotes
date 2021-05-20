@@ -1,10 +1,9 @@
 import {BehaviorSubject, EMPTY, from, Observable, of} from 'rxjs';
 import {cites} from '../fixtures/data';
-import {CiteI} from '../models/Cite';
-import {distinct, filter, map, switchMap, tap, toArray} from 'rxjs/operators';
+import {Cite, CiteI} from '../models/Cite';
+import {distinct, filter, map, switchMap, take, tap, toArray} from 'rxjs/operators';
 import {Injectable} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import * as rfdc from 'rfdc';
 
 @Injectable()
 export class Cites {
@@ -14,8 +13,19 @@ export class Cites {
     .pipe(
       filter(value => !!value),
       // this is for a kind of immutability: if something push/pop/shift/... the CiteI[] it won't alter every subcriber that has saved the data
-      map(next => rfdc()(next)),
-      distinct()
+      //map(next => rfdc()(next)), // @todo find why it destroy the original object : Cite become a simple object & the proto is not copied
+      map(next => {
+        return next.map(cite => {
+          const newCite = new Cite();
+          newCite.setId(cite.getId())
+            .setAuthor(cite.getAuthor())
+            .setCite(cite.getCite());
+
+          return newCite;
+        });
+      }),
+      distinct(),
+      take(1) // auto unsubscribe, force complete
     );
   // local cache for the counter
   protected count = 0;
@@ -24,7 +34,7 @@ export class Cites {
     cites.pipe(
       tap(next => this.originalCites = next),
       tap(next => this.count = next.length),
-      switchMap(() => this.reset())
+      switchMap(() => this.reset()),
     ).subscribe();
   }
 
