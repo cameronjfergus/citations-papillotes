@@ -18,14 +18,9 @@ export class ListCitesComponent implements OnInit {
   constructor(protected route: ActivatedRoute, public citeService: Cites) { }
 
   ngOnInit(): void {
-    this.citeService.cites$.subscribe({
-      next: (next: CiteI[]) => {
+    this.citeService.cites$.subscribe((next: CiteI[]) => {
         this.fillCites(next);
-      },
-      complete: () => {
-        console.log('ListCitesComponent complete');
-      }
-    });
+      });
 
     this.route.queryParamMap.subscribe(params => {
       if (!params.get('q')) {
