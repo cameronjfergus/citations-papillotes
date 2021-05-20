@@ -15,6 +15,7 @@ import { RandomComponent } from './components/random/random.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import {Click} from './services/Click';
+import {Authors} from './services/Cites/Authors';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import {Click} from './services/Click';
     }),
   ],
   providers: [
+    Authors,
     Cites,
     Click,
   ],

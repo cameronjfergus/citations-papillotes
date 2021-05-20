@@ -1,6 +1,6 @@
 import {Cite, CiteI} from '../models/Cite';
 import {from, Observable, of} from 'rxjs';
-import {map, switchMap, toArray} from 'rxjs/operators';
+import {map, switchMap, take, toArray} from 'rxjs/operators';
 
 /**
  * This file should be only imported from Service Cites tht will simulate a DataStore
@@ -345,5 +345,6 @@ export const cites: Observable<CiteI[]> = of(data)
               .setAuthor(next.author);
       }),
       // restore into one stream of items
-      toArray()
+      toArray(),
+      take(1) // auto unsubscribe, force complete
   );

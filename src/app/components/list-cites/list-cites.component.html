@@ -9,7 +9,7 @@
 </h2>
 
 <ul class="list-none">
-  <li class="p-1" *ngFor="let item of cites | paginate: { itemsPerPage: getItemsPerPage(), currentPage: getCurrentPage() };"><cite>”{{item.cite}}”</cite> de <a routerLink="/search" [queryParams]="{q: item.author}">{{item.author}}</a></li>
+  <li class="p-1" *ngFor="let item of cites | paginate: { itemsPerPage: getItemsPerPage(), currentPage: getCurrentPage() };"><cite>”{{item.getCite()}}”</cite> de <a routerLink="/search" [queryParams]="{q: item.getAuthor()}">{{item.getAuthor()}}</a></li>
 </ul>
 
 <!-- pagination on top of cites coz i don't find a way for instance to set a fixed height for cites and put pagination after (for instance the pager moves in height with the number of rows in the cites) -->
