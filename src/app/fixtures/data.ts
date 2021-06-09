@@ -13,7 +13,7 @@ const data: {cite: string, author: string, tags?: [string]}[] = [
   {cite: `Apprenons à tendre la main pas seulement pour recevoir, mais également pour donner.`, author: `Wembo Jah Olela`},
   {cite: `Peu importe où nous sommes, ma maison n'est pas un lieu, ma maison c'est toi.`, author: `Fynn Kliemann`},
   {cite: `Pour faire du bien, personne n'a besoin de réfléchir.`, author: `Johann Wolfgang Von Goethe`},
-  {cite: `Il n'y a que deux façons de vivre sa vie : l'une en faisant comme si rien n'était un miracle, l'uatre en faisant comme si tout était un miracle.`, author: `Albert Einstein`},
+  {cite: `Il n'y a que deux façons de vivre sa vie : l'une en faisant comme si rien n'était un miracle, l'autre en faisant comme si tout était un miracle.`, author: `Albert Einstein`},
   {cite: `La faculté de se mettre dans la peau des autres et de réfléchir à la manière dont on agirait à leur place est très utile si on veut apprendre à aimer quelqu'un.`, author: `Dalai Lama`},
   {cite: `Répands tes bienfaits sur tes amis, pour qu'ils t'aiment plus tendrement encore ; répands-les sur tes ennemis, pour qu'ils deviennent enfin tes amis.`, author: `Cléobus de Lindos`},
   {cite: `Souris au monde et le monde te sourira.`, author: `Soeur Emmanuelle`},
@@ -328,7 +328,6 @@ const data: {cite: string, author: string, tags?: [string]}[] = [
   {cite: `Si je rêve tout seul, cela reste un rêve. Si nous rêvons ensemble, c'est le début de la réalité.`, author: `Proverbe persan`, tags: ['pensées positives']},
   {cite: `Il n'est pas de joie qui égale celle de se créer de nouvelles amitiés.`, author: `Proverbe chinois`, tags: ['pensées positives']},
 ];
-let index = 0;
 
 // Because RxJs is the life, so we don't export array, but an Observable. It will be used by the service to share data with the application
 export const cites: Observable<CiteI[]> = of(data)
@@ -338,13 +337,13 @@ export const cites: Observable<CiteI[]> = of(data)
       // switch into a stream of item instead of one stream of an array of items
       switchMap(next => from(next)),
       // transform each item into a Cite Object
-      map(next => {
+      map((next, index) => {
           return (new Cite())
-              .setId(index++)
+              .setId(index)
               .setCite(next.cite)
               .setAuthor(next.author);
       }),
-      // restore into one stream of items
+      // restore into one stream of items (from() will send a complete event that allows toArray() to be triggered)
       toArray(),
       take(1) // auto unsubscribe, force complete
   );
