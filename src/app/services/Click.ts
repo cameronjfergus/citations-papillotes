@@ -8,7 +8,7 @@ export class Click {
   public refresh$: Observable<boolean> = this.refresh.asObservable()
     .pipe(
       filter(value => !!value),
-      debounceTime(500),
+      debounceTime(250),
     );
 
   public click(): void {
