@@ -388,7 +388,13 @@ const data: {cite: string, author: string, tags?: string[]}[] = [
   {cite: `Ralentissez et tout devient plus beau.`, author: `David Lynch`},
   {cite: `Ecris sur ton coeur que chaque jour est le plus beau jour de l'année.`, author: `Ralph Waldo Emerson`},
   {cite: `Le plus grand échec est de ne pas avoir le courage d'oser.`, author: `Abbé Pierre`},
-  //{cite: `.`, author: ``},
+  {cite: `Avant de vous diagnostiquer comme dépressif ou en état de faible estime de vous-même, commencez par vous assurer que vous n'êtes juste pas, en fait, entouré par des trous du cul.`, author: `William Gibson`},
+  {cite: `L'appétit vient en mangeant, la soif disparait en buvant.`, author: `François Rabelais`},
+  {cite: `Le créateur, en obligeant l'homme à manger pour vivre, l'y invite par l'appétit et le récompense par le plaisir.`, author: `Jean Anthelme Brillat-Savarin`},
+  {cite: `La gourmandise commence quand on n'a plus faim.`, author: `Alphonse Daudet`},
+  {cite: `Si vous n'êtes pas capable d'un peu de sorcellerie, ce n'est pas la peine de vous mêler de cuisine.`, author: `Colette`},
+  {cite: `Bien manger, c'est atteindre le ciel.`, author: `Proverbe chinois`},
+  // {cite: `.`, author: ``},
 ];
 // 2 juillet / 10 juin
 
