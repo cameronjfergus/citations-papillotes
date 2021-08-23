@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {CiteI} from '../../models/Cite';
 import {Cites} from '../../services/Cites';
 import {Click} from '../../services/Click';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-random',
@@ -12,7 +13,8 @@ export class RandomComponent implements OnInit {
   cites: CiteI[];
   cite: CiteI;
 
-  constructor(protected citesService: Cites, protected click: Click) {
+  constructor(protected citesService: Cites, protected click: Click, protected title: Title) {
+    this.title.setTitle('Citations - Citation aléatoire')
   }
 
   ngOnInit(): void {

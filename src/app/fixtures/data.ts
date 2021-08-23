@@ -394,6 +394,7 @@ const data: {cite: string, author: string, tags?: string[]}[] = [
   {cite: `La gourmandise commence quand on n'a plus faim.`, author: `Alphonse Daudet`},
   {cite: `Si vous n'êtes pas capable d'un peu de sorcellerie, ce n'est pas la peine de vous mêler de cuisine.`, author: `Colette`},
   {cite: `Bien manger, c'est atteindre le ciel.`, author: `Proverbe chinois`},
+  {cite: `Si je pétais tout ce que j'ai mangé, je serais sur la lune.`, author: `Camille Richard`},
   // {cite: `.`, author: ``},
 ];
 // 2 juillet / 10 juin

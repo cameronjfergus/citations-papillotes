@@ -1,9 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {BaseUnsubscribeComponent} from '../common/BaseUnsubscribeComponent';
 import {Authors} from '../../services/Cites/Authors';
 import {AuthorI} from '../../models/Authors';
-import {tap} from 'rxjs/operators';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-list-authors',
@@ -15,7 +14,8 @@ export class ListAuthorsComponent implements OnInit {
   protected currentPage: number;
   protected itemsPerPage = 10;
 
-  constructor(protected route: ActivatedRoute, public authorService: Authors) {
+  constructor(protected route: ActivatedRoute, public authorService: Authors, protected title: Title) {
+    this.title.setTitle('Citations - Liste des auteurs')
   }
 
   ngOnInit(): void {

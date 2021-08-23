@@ -3,6 +3,7 @@ import {CiteI} from '../../models/Cite';
 import {ActivatedRoute} from '@angular/router';
 import {Cites} from '../../services/Cites';
 import {tap} from 'rxjs/operators';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-list-cites',
@@ -15,7 +16,9 @@ export class ListCitesComponent implements OnInit {
   protected currentPage: number;
   protected itemsPerPage = 10;
 
-  constructor(protected route: ActivatedRoute, public citeService: Cites) { }
+  constructor(protected route: ActivatedRoute, public citeService: Cites, protected title: Title) {
+    this.title.setTitle('Citations - Liste des citations')
+  }
 
   ngOnInit(): void {
     this.citeService.cites$.subscribe((next: CiteI[]) => {

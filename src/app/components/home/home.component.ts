@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CiteI} from '../../models/Cite';
 import {Cites} from '../../services/Cites';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,8 @@ import {Cites} from '../../services/Cites';
 export class HomeComponent implements OnInit {
   cite: CiteI;
 
-  constructor(protected citesService: Cites) {
+  constructor(protected citesService: Cites, protected title: Title) {
+    this.title.setTitle('Citations - Citation du jour')
   }
 
   ngOnInit(): void {
