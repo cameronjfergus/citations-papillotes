@@ -58,7 +58,6 @@ export class Authors{
           const bFirstname = bParts[0];
 
           if (aFirstname && aFirstname.toLowerCase() === 'proverbe') {
-            //debugger
             return 1;
           }
 

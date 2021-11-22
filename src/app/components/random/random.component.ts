@@ -25,5 +25,8 @@ export class RandomComponent implements OnInit {
     this.click.refresh$.subscribe(next => {
       this.cite = this.cites[Math.floor(Math.random() * this.cites.length)];
     });
+
+    // for a page refresh, no click are thrown from the navbar, so i have to simulate it here : is there a best pattern
+    this.click.click()
   }
 }
