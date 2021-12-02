@@ -325,7 +325,7 @@ const data: {cite: string, author: string, tags?: string[]}[] = [
   {cite: `Notre plus grande gloire n'est pas de ne jamais tomber, mais de nous relever chaque fois.`, author: `Confucius`},
   {cite: `Les conséquences de la colère sont beaucoup plus graves que les causes.`, author: `Marc Aurèle`},
   {cite: `Chaque coup de colère est un coup de vieux, chaque sourire est un coup de jeune.`, author: `Proverbe chinois`},
-  {cite: `La découverte d'un mets nouveau fait plus pour le bonheur du genre humain que la découverte d'une étoile.`, author: `Brillat-Savarin`},
+  {cite: `La découverte d'un mets nouveau fait plus pour le bonheur du genre humain que la découverte d'une étoile.`, author: `Jean Anthelme Brillat-Savarin`},
   {cite: `La science est le savoir organisé. La sagesse est la vie organisée.`, author: `Emmanuel Kant`},
   {cite: `Si je rêve tout seul, cela reste un rêve. Si nous rêvons ensemble, c'est le début de la réalité.`, author: `Proverbe persan`, tags: ['pensées positives']},
   {cite: `Il n'est pas de joie qui égale celle de se créer de nouvelles amitiés.`, author: `Proverbe chinois`, tags: ['pensées positives']},
@@ -395,6 +395,10 @@ const data: {cite: string, author: string, tags?: string[]}[] = [
   {cite: `Si vous n'êtes pas capable d'un peu de sorcellerie, ce n'est pas la peine de vous mêler de cuisine.`, author: `Colette`},
   {cite: `Bien manger, c'est atteindre le ciel.`, author: `Proverbe chinois`},
   {cite: `Si je pétais tout ce que j'ai mangé, je serais sur la lune.`, author: `Camille Richard`},
+  {cite: `La joie prolonge la vie.`, author: `Ben Sira`},
+  {cite: `La bouche garde le silence pour écouter parler le coeur.`, author: `Alfred de Musset`},
+  {cite: `Il n'y a qu'une sorte d'amour, mais il y en a mille différentes copies.`, author: `François de La Rochefoucauld`},
+  {cite: `La vie est courte, mais le sourire ne prend qu'une seconde.`, author: `Proverbe cubain`},
   // {cite: `.`, author: ``},
 ];
 // 2 juillet / 10 juin
