@@ -298,7 +298,7 @@ const data: {cite: string, author: string, tags?: string[]}[] = [
   {cite: `Si vous voulez que la vie vous sourit, apportez-lui d'abord votre bonne humeur.`, author: `Spinoza`},
   {cite: `Tant de mains pour transformer ce monde, et si peu de regards pour le contempler !`, author: `Julien Gracq`},
   {cite: `Trois bougies repoussent les ténèbres ; la vérité, la connaissance et les lois de la nature.`, author: `Proverbe celtique`},
-  {cite: `Aimez les yeux ouverts.`, author: `Titre d'un livre de Jorge Bucay`},
+  {cite: `Aimez les yeux ouverts.`, author: `Jorge Bucay`, tags: ['extrait']},
   {cite: `La beauté des choses existe dans l'esprit de celui qui les contemple.`, author: `David Hume`},
   {cite: `Une fleur fane même si on l'aime ; une mauvaise herbe croit même si on ne l'aime pas.`, author: `Dögen`},
   {cite: `Lire, c'est voyager ; voyager, c'est lire.`, author: `Victor Hugo`},
