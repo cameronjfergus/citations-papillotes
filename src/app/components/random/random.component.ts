@@ -14,7 +14,7 @@ export class RandomComponent implements OnInit {
   cite: CiteI;
 
   constructor(protected citesService: Cites, protected click: Click, protected title: Title) {
-    this.title.setTitle('Citations - Citation aléatoire')
+    this.title.setTitle('Citations - Citation aléatoire');
   }
 
   ngOnInit(): void {
@@ -27,6 +27,6 @@ export class RandomComponent implements OnInit {
     });
 
     // for a page refresh, no click are thrown from the navbar, so i have to simulate it here : is there a best pattern
-    this.click.click()
+    this.click.click();
   }
 }
