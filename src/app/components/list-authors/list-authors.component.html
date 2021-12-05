@@ -1,10 +1,17 @@
-<h1 class="text-5xl lg:text-6xl font-bold text-teal-600 mb-2 lg:mb-6">
+<div class="container">
+  <h1 class="text-5xl lg:text-6xl font-bold text-teal-600 mb-2 lg:mb-6">
   {{authors?.length}} Auteurs.
 </h1>
-
 <ul class="list-none">
   <li class="p-1" *ngFor="let item of authors | paginate: { itemsPerPage: getItemsPerPage(), currentPage: getCurrentPage() };"><a routerLink="/search" [queryParams]="{q: item.getName()}">{{item.getName()}} <small>({{item.getCount()}})</small></a></li>
 </ul>
+</div>
 
-<!-- pagination on top of cites coz i don't find a way for instance to set a fixed height for cites and put pagination after (for instance the pager moves in height with the number of rows in the cites) -->
-<pagination-controls (pageChange)="setCurrentPage($event)" class="p-8"></pagination-controls>
+<div class="container">
+  <div class="w-full">
+    <section id="bottom-navigation" class="block fixed inset-x-0 bottom-10 z-10 bg-white">
+      <!-- pagination on top of cites coz i don't find a way for instance to set a fixed height for cites and put pagination after (for instance the pager moves in height with the number of rows in the cites) -->
+      <pagination-controls (pageChange)="setCurrentPage($event)" responsive="true" class="p-8"></pagination-controls>
+    </section>
+  </div>
+</div>
