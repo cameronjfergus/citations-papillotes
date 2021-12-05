@@ -1,16 +1,5 @@
-import {BehaviorSubject, from, Observable, of} from 'rxjs';
-import {
-  concatAll,
-  distinct,
-  filter,
-  groupBy,
-  map,
-  mergeMap,
-  skipUntil,
-  switchMap,
-  take,
-  toArray
-} from 'rxjs/operators';
+import {BehaviorSubject, from, Observable} from 'rxjs';
+import {concatAll, distinct, filter, groupBy, map, mergeMap, skipUntil, switchMap, take, toArray} from 'rxjs/operators';
 import {Injectable} from '@angular/core';
 import {Cites} from '../Cites';
 import {Author, AuthorI} from '../../models/Authors';
