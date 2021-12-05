@@ -12,8 +12,10 @@ export class Cites {
   public cites$: Observable<CiteI[]> = this.cites.asObservable()
     .pipe(
       filter(value => !!value),
-      // this is for a kind of immutability: if something push/pop/shift/... the CiteI[] it won't alter every subcriber that has saved the data
-      //map(next => rfdc()(next)), // @todo find why it destroy the original object : Cite become a simple object & the proto is not copied
+      // this is for a kind of immutability: if something push/pop/shift/... the CiteI[] it
+      // won't alter every subcriber that has saved the data
+      // map(next => rfdc()(next)), // @todo find why it destroy the original object : Cite
+      // become a simple object & the proto is not copied
       map(next => {
         return next.map(cite => {
           const newCite = new Cite();
