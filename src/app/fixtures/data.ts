@@ -375,7 +375,7 @@ const data: {cite: string, author: string, tags?: string[]}[] = [
   {cite: `La joie ets en tout, il faut savoir l'extraire.`, author: `Mary Oliver`},
   {cite: `La vie est une grande toile vierge: à vous d'y ajouter le plus de couleurs possible.`, author: `Danny Kaye`},
   {cite: `Quand je me promène, je sens toujours qu'au coin de la rue. Il y a quelque chose de merveilleux qui m'attend.`, author: `Sophia Loren`},
-  {cite: `Le bonheur est un seul bouqet : confus léger fondant sucré.`, author: `Paul Eluard`},
+  {cite: `Le bonheur est un seul bouquet : confus léger fondant sucré.`, author: `Paul Eluard`},
   {cite: `Qui sème le silence récolte la paix.`, author: `Proverbe thaïlandais`},
   {cite: `La vie a beaucoup plus d'imagination que nous.`, author: `François Truffaut`},
   {cite: `Le vrai bonheur serait de se souvenir du présent.`, author: `Jules Renard`},
