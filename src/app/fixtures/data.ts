@@ -201,7 +201,7 @@ const data: {cite: string, author: string, tags?: string[]}[] = [
   {cite: `Lorsqu'on tire sur un seul fil de la nature, on découvre qu'il est attaché au reste du monde.`, author: `John Muir`},
   {cite: `L'expérience est une lanterne que l'on porte sur le dos et qui n'éclaire jamais que le chemin parcouru.`, author: `Confucius`},
   {cite: `La nature fait les choses sans se presser, et pourtant tout est accompli.`, author: `Lao Zi`},
-  {cite: `Apprends comme si tu devais vivre pour toujours et vis comme si tu devais mourir ce soir !`, author: `Proverbe Tibétain`},
+  {cite: `Apprends comme si tu devais vivre pour toujours et vis comme si tu devais mourir ce soir !`, author: `Proverbe tibétain`},
   {cite: `Si tu veux être heureux, sois-le.`, author: `Proverbe chinois`},
   {cite: `Le grand inconvénient des livres nouveaux est de nous empêcher de lire les anciens.`, author: `Joseph Joubert`},
   {cite: `On ne doit pas juger du mérite d'un homme par ses grandes qualités, mais par l'usage qu'il en sait faire.`, author: `Jean de La Bruyère`},
