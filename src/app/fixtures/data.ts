@@ -400,6 +400,7 @@ const data: {cite: string, author: string, tags?: string[]}[] = [
   {cite: `Il n'y a qu'une sorte d'amour, mais il y en a mille différentes copies.`, author: `François de La Rochefoucauld`},
   {cite: `La vie est courte, mais le sourire ne prend qu'une seconde.`, author: `Proverbe cubain`},
   {cite: `Au milieu de l'hiver, j'ai découvert en moi un invincible été.`, author: `Albert Camus`},
+  {cite: `Le voyage est un retour vers l'essentiel.`, author: `Proverbe tibétain`},
   // {cite: `.`, author: ``},
 ];
 // 2 juillet / 10 juin
