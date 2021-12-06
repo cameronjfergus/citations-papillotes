@@ -406,6 +406,8 @@ const data: {cite: string, author: string, tags?: string[]}[] = [
   {cite: `Le bonheur a les bras ouverts et les yeux fermés.`, author: `Proverbe allemand`, tags: ['proverbe']},
   {cite: `Hâtons-nous de succomber à la tentation avant qu'elle ne s'éloigne.`, author: `Epicure`},
   {cite: `Il faut toujours viser la lune, car même en cas d'échec, on atterrit dans les étoiles.`, author: `Oscar Wilde`},
+  {cite: `Vivre de telle sorte qu'il te faille désirer revivre, c'est là ton devoir.`, author: `Nietzsche`},
+  {cite: `Les oreilles et les yeux sont les portes et les fenêtres de l'âme.`, author: `Joseph Joubert`},
   // {cite: `.`, author: ``},
 ];
 // 2 juillet / 10 juin
