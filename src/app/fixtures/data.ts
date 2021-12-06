@@ -403,6 +403,9 @@ const data: {cite: string, author: string, tags?: string[]}[] = [
   {cite: `Le voyage est un retour vers l'essentiel.`, author: `Proverbe tibétain`, tags: ['proverbe']},
   {cite: `Le bonheur est une petite chose que l'on grignote, assis par terre, au soleil.`, author: `Jean Giraudoux`},
   {cite: `Fais du bien à ton corps pour que ton âme ait envie d'y rester.`, author: `Proverbe indien`, tags: ['proverbe']},
+  {cite: `Le bonheur a les bras ouverts et les yeux fermés.`, author: `Proverbe allemand`, tags: ['proverbe']},
+  {cite: `Hâtons-nous de succomber à la tentation avant qu'elle ne s'éloigne.`, author: `Epicure`},
+  {cite: `Il faut toujours viser la lune, car même en cas d'échec, on atterrit dans les étoiles.`, author: `Oscar Wilde`},
   // {cite: `.`, author: ``},
 ];
 // 2 juillet / 10 juin
