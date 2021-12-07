@@ -16,6 +16,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import {Click} from './services/Click';
 import {Authors} from './services/Cites/Authors';
+import {ListCitesByAuthorsComponent} from './components/list-cites-by-authors/list-cites-by-authors.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {Authors} from './services/Cites/Authors';
     HomeComponent,
     ListCitesComponent,
     ListAuthorsComponent,
+    ListCitesByAuthorsComponent,
     RandomComponent,
     SearchComponent,
     PageNotFoundComponent

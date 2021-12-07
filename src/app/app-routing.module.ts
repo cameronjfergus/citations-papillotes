@@ -5,11 +5,13 @@ import {ListCitesComponent} from './components/list-cites/list-cites.component';
 import {PageNotFoundComponent} from './components/pageNotFound/page-not-found.component';
 import {ListAuthorsComponent} from './components/list-authors/list-authors.component';
 import {RandomComponent} from './components/random/random.component';
+import {ListCitesByAuthorsComponent} from './components/list-cites-by-authors/list-cites-by-authors.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, },
   { path: 'cites', component: ListCitesComponent, },
   { path: 'authors', component: ListAuthorsComponent, },
+  { path: 'authors/:author', component: ListCitesByAuthorsComponent, },
   { path: 'random', component: RandomComponent, },
   { path: 'search', component: ListCitesComponent, },
   { path: '**', component: PageNotFoundComponent },

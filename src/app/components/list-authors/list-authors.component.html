@@ -3,7 +3,9 @@
   {{authors?.length}} Auteurs.
 </h1>
 <ul class="list-none">
-  <li class="p-1" *ngFor="let item of authors | paginate: { itemsPerPage: getItemsPerPage(), currentPage: getCurrentPage() };"><a routerLink="/search" [queryParams]="{q: item.getName()}">{{item.getName()}} <small>({{item.getCount()}})</small></a></li>
+  <li class="p-1" *ngFor="let item of authors | paginate: { itemsPerPage: getItemsPerPage(), currentPage: getCurrentPage() };">
+    <a routerLink="/authors/{{item.getName()}}">{{item.getName()}} <small>({{item.getCount()}})</small></a>
+  </li>
 </ul>
 </div>
 

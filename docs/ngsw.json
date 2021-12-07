@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1638900766051,
+  "timestamp": 1638917161270,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.b80f0bdc9ec3ca31.js",
+        "/main.13cf6311bd97791a.js",
         "/manifest.webmanifest",
         "/polyfills.b19b2ecad423943a.js",
         "/runtime.5b8bb7e719605d15.js",
@@ -54,8 +54,8 @@
     "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/index.html": "3aad91f03e34a03e95c3732770457550d5d591a3",
-    "/main.b80f0bdc9ec3ca31.js": "88fd313c7ec8b0f45cf279bbe4d2c0e0a580a94d",
+    "/index.html": "64aca3e6b86f466baa6f1b7a07df75016fdc6d91",
+    "/main.13cf6311bd97791a.js": "576d15e4215fd5a1e10c13bbab908c92f46614a4",
     "/manifest.webmanifest": "fbce763304ed7e6c812e446c0f37250541d27b70",
     "/polyfills.b19b2ecad423943a.js": "5bf377cefa10060241abe101d0998532ccc26745",
     "/runtime.5b8bb7e719605d15.js": "2e2d1ce67544baf987763acec74cbcd31b5d9626",
