@@ -61,8 +61,9 @@ export class Cites {
 
         return item
           && (
-            item.cite.toLowerCase().includes(search.toLowerCase())
-            || item.author.toLowerCase().includes(search.toLowerCase())
+            item.getCite().toLowerCase().includes(search.toLowerCase())
+            || item.getAuthor().toLowerCase().includes(search.toLowerCase())
+            || item.getTags().includes(search.toLowerCase())
           );
       }),
       toArray(),

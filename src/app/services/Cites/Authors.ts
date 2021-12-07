@@ -30,7 +30,7 @@ export class Authors{
 
     citeService.cites$.pipe(
       switchMap(next => from(next)),
-      map(next => next.author),
+      map(next => next.getAuthor()),
       map(next => {
         let author: AuthorI;
         if (authors.find(item => item.getName() === next)) {

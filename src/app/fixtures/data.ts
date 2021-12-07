@@ -2,10 +2,16 @@ import {Cite, CiteI} from '../models/Cite';
 import {from, Observable, of} from 'rxjs';
 import {map, switchMap, take, toArray} from 'rxjs/operators';
 
+interface FixtureCiteI {
+  cite: string;
+  author: string;
+  tags?: string[];
+}
+
 /**
  * This file should be only imported from Service Cites that will simulate a DataStore
  */
-const data: {cite: string, author: string, tags?: string[]}[] = [
+const data: FixtureCiteI[] = [
   {cite: `Chaque commencement recèle une magie cachée.`, author: `Hermann Hesse`},
   {cite: `Rarement nous pensons à ce que nous avons, mais souvent à ce qui nous manque.`, author: `Arthur Schopenhauer`},
   {cite: `Comme le dauphin j'ai le dos fin.`, author: `Maître Reiki Kanak`},
@@ -41,7 +47,7 @@ const data: {cite: string, author: string, tags?: string[]}[] = [
   {cite: `Là où l'on s'aime il ne fait jamais nuit.`, author: `Proverbe africain`, tags: ['proverbe']},
   {cite: `Le risque de prendre une mauvaise décision n'est rien comparé à la terreur de l'indécision.`, author: `Maimonide`},
   {cite: `En tentant l'impossible, on peut atteindre le plus haut niveau du possible.`, author: `August Strindberg`},
-  {cite: `Souris à la vie pour qu'elle te sourie.`, author: `Proverbe tunisien`, tags: ['proverbe']},
+  {cite: `Souris à la vie pour qu'elle te sourit.`, author: `Proverbe tunisien`, tags: ['proverbe']},
   {cite: `A coeur vaillant rien d'impossible.`, author: `Jacques Coeur`},
   {cite: `L'important n'est pas ce que l'on regarde mais ce que l'on voit.`, author: `Henry David Thoreau`},
   {cite: `A travers les feuilles d'un bon livre, on pourra entendre un écho qui ressemble aux bruits des fôrets.`, author: `Henry David Thoreau`},
@@ -408,6 +414,7 @@ const data: {cite: string, author: string, tags?: string[]}[] = [
   {cite: `Il faut toujours viser la lune, car même en cas d'échec, on atterrit dans les étoiles.`, author: `Oscar Wilde`},
   {cite: `Vivre de telle sorte qu'il te faille désirer revivre, c'est là ton devoir.`, author: `Nietzsche`},
   {cite: `Les oreilles et les yeux sont les portes et les fenêtres de l'âme.`, author: `Joseph Joubert`},
+  {cite: `Quelle flamme pourrait égaler le rayon de soleil d'un jour d'hiver ?.`, author: `Henry David Thoreau`},
   // {cite: `.`, author: ``},
 ];
 // 2 juillet / 10 juin
@@ -416,7 +423,8 @@ const data: {cite: string, author: string, tags?: string[]}[] = [
 export const cites: Observable<CiteI[]> = of(data)
   .pipe(
       // filter to prevent duplicated rows
-      map(next => next.filter((item: CiteI) => next.map(itemOfCites => itemOfCites.cite).includes(item.cite))),
+      map(next => next.filter((item: FixtureCiteI) =>
+        next.map(itemOfCites => itemOfCites.cite).includes(item.cite))),
       // switch into a stream of item instead of one stream of an array of items
       switchMap(next => from(next)),
       // transform each item into a Cite Object
@@ -424,7 +432,8 @@ export const cites: Observable<CiteI[]> = of(data)
           return (new Cite())
               .setId(index)
               .setCite(next.cite)
-              .setAuthor(next.author);
+              .setAuthor(next.author)
+              .setTags(next.tags);
       }),
       // restore into one stream of items (from() will send a complete event that allows toArray() to be triggered)
       toArray(),

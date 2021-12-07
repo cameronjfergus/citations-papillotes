@@ -17,7 +17,7 @@ export class ListCitesComponent implements OnInit {
   protected itemsPerPage = 10;
 
   constructor(protected route: ActivatedRoute, public citeService: Cites, protected title: Title) {
-    this.title.setTitle('Citations - Liste des citations')
+    this.title.setTitle('Citations - Liste des citations');
   }
 
   ngOnInit(): void {
@@ -39,7 +39,7 @@ export class ListCitesComponent implements OnInit {
     });
   }
 
-  protected fillCites(citesList): void {
+  protected fillCites(citesList: CiteI[]): void {
     this.cites = [];
     citesList.forEach(cite => this.cites.push(cite));
   }
