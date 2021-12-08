@@ -415,6 +415,7 @@ const data: FixtureCiteI[] = [
   {cite: `Vivre de telle sorte qu'il te faille désirer revivre, c'est là ton devoir.`, author: `Nietzsche`},
   {cite: `Les oreilles et les yeux sont les portes et les fenêtres de l'âme.`, author: `Joseph Joubert`},
   {cite: `Quelle flamme pourrait égaler le rayon de soleil d'un jour d'hiver ?.`, author: `Henry David Thoreau`},
+  {cite: `Grand est celui qui n'a pas perdu son coeur d'enfant.`, author: `Meng-Tsen`},
   // {cite: `.`, author: ``},
 ];
 // 2 juillet / 10 juin
