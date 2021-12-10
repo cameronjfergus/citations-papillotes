@@ -1,16 +1,5 @@
-import {BehaviorSubject, from, Observable, of} from 'rxjs';
-import {
-  concatAll,
-  distinct,
-  filter,
-  groupBy,
-  map,
-  mergeMap,
-  skipUntil,
-  switchMap,
-  take,
-  toArray
-} from 'rxjs/operators';
+import {BehaviorSubject, from, Observable} from 'rxjs';
+import {concatAll, distinct, filter, groupBy, map, mergeMap, skipUntil, switchMap, take, toArray} from 'rxjs/operators';
 import {Injectable} from '@angular/core';
 import {Cites} from '../Cites';
 import {Author, AuthorI} from '../../models/Authors';
@@ -41,7 +30,7 @@ export class Authors{
 
     citeService.cites$.pipe(
       switchMap(next => from(next)),
-      map(next => next.author),
+      map(next => next.getAuthor()),
       map(next => {
         let author: AuthorI;
         if (authors.find(item => item.getName() === next)) {
@@ -71,19 +60,21 @@ export class Authors{
               const bLastname = bParts.length > 1 ? bParts.pop() : bParts.shift();
               const bFirstname = bParts[0];
 
-              if (aLastname < bLastname) {
+              if (aLastname.toLowerCase() < bLastname.toLowerCase()) {
                 return -1;
-              } else if (aLastname > bLastname) {
+              } else if (aLastname.toLowerCase() > bLastname.toLowerCase()) {
                 return 1;
-              } else {
-                if (aFirstname < bFirstname) {
+              } else if (aFirstname) {
+                if (aFirstname.toLowerCase() < bFirstname.toLowerCase()) {
                   return -1;
-                } else if (aFirstname > bFirstname) {
+                } else if (aFirstname.toLowerCase() > bFirstname.toLowerCase()) {
                   return 1;
                 }
 
                 return 0;
               }
+
+              return 0;
             });
           })
         )

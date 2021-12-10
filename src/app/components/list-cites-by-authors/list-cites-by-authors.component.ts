@@ -6,12 +6,12 @@ import {tap} from 'rxjs/operators';
 import {Title} from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-list-cites',
-  templateUrl: './list-cites.component.html',
+  selector: 'app-list-cites-by-authors',
+  templateUrl: './list-cites-by-authors.component.html',
   styleUrls: []
 })
-export class ListCitesComponent implements OnInit {
-  q: string;
+export class ListCitesByAuthorsComponent implements OnInit {
+  author: string;
   cites: CiteI[] = [];
   protected currentPage: number;
   protected itemsPerPage = 10;
@@ -21,19 +21,9 @@ export class ListCitesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.citeService.cites$.subscribe((next: CiteI[]) => {
-        this.fillCites(next);
-      });
-
-    this.route.queryParamMap.subscribe(params => {
-      if (!params.get('q')) {
-        this.citeService.reset().subscribe();
-
-        return;
-      }
-
-      this.q = params.get('q');
-      this.citeService.search(this.q).pipe(
+    this.route.paramMap.subscribe(params => {
+      this.author = params.get('author');
+      this.citeService.searchByAuthor(this.author).pipe(
         tap(next => this.fillCites(next))
       ).subscribe();
     });

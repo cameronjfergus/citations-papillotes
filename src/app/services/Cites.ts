@@ -21,7 +21,8 @@ export class Cites {
           const newCite = new Cite();
           newCite.setId(cite.getId())
             .setAuthor(cite.getAuthor())
-            .setCite(cite.getCite());
+            .setCite(cite.getCite())
+            .setTags(cite.getTags());
 
           return newCite;
         });
@@ -61,9 +62,25 @@ export class Cites {
 
         return item
           && (
-            item.cite.toLowerCase().includes(search.toLowerCase())
-            || item.author.toLowerCase().includes(search.toLowerCase())
+            item.getCite().toLowerCase().includes(search.toLowerCase())
+            || item.getAuthor().toLowerCase().includes(search.toLowerCase())
+            || item.getTags().includes(search.toLowerCase())
           );
+      }),
+      toArray(),
+    );
+  }
+
+  public searchByAuthor(author: string): Observable<CiteI[]> {
+    if (!this.cites.getValue()) {
+      return EMPTY;
+    }
+
+    return of(this.cites.getValue()).pipe(
+      switchMap(next => from(next)),
+      filter(item => {
+        return item
+          && item.getAuthor().toLowerCase().includes(author.toLowerCase());
       }),
       toArray(),
     );
