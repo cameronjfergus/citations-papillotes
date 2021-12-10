@@ -12,18 +12,18 @@ interface FixtureCiteI {
  * This file should be only imported from Service Cites that will simulate a DataStore
  */
 const data: FixtureCiteI[] = [
-  {cite: `Chaque commencement recèle une magie cachée.`, author: `Hermann Hesse`},
+  {cite: `Chaque commencement recèle une magie cachée.`, author: `Hermann Hesse`, tags: ['espoir']},
   {cite: `Rarement nous pensons à ce que nous avons, mais souvent à ce qui nous manque.`, author: `Arthur Schopenhauer`},
   {cite: `Comme le dauphin j'ai le dos fin.`, author: `Maître Reiki Kanak`},
   {cite: `L'âme porte les couleurs de tes pensées.`, author: `Marc Aurèle`},
-  {cite: `Apprenons à tendre la main pas seulement pour recevoir, mais également pour donner.`, author: `Wembo Jah Olela`},
-  {cite: `Peu importe où nous sommes, ma maison n'est pas un lieu, ma maison c'est toi.`, author: `Fynn Kliemann`},
-  {cite: `Pour faire du bien, personne n'a besoin de réfléchir.`, author: `Johann Wolfgang Von Goethe`},
-  {cite: `Il n'y a que deux façons de vivre sa vie : l'une en faisant comme si rien n'était un miracle, l'autre en faisant comme si tout était un miracle.`, author: `Albert Einstein`},
-  {cite: `La faculté de se mettre dans la peau des autres et de réfléchir à la manière dont on agirait à leur place est très utile si on veut apprendre à aimer quelqu'un.`, author: `Dalai Lama`},
-  {cite: `Répands tes bienfaits sur tes amis, pour qu'ils t'aiment plus tendrement encore ; répands-les sur tes ennemis, pour qu'ils deviennent enfin tes amis.`, author: `Cléobus de Lindos`},
-  {cite: `Souris au monde et le monde te sourira.`, author: `Soeur Emmanuelle`},
-  {cite: `L'humour a non seulement quelque chose de libérateur, mais encore quelque chose de sublime et d'élevé.`, author: `Sigmund Freud`},
+  {cite: `Apprenons à tendre la main pas seulement pour recevoir, mais également pour donner.`, author: `Wembo Jah Olela`, tags: ['générosité']},
+  {cite: `Peu importe où nous sommes, ma maison n'est pas un lieu, ma maison c'est toi.`, author: `Fynn Kliemann`, tags: ['amour']},
+  {cite: `Pour faire du bien, personne n'a besoin de réfléchir.`, author: `Johann Wolfgang Von Goethe`, tags: ['gentillesse']},
+  {cite: `Il n'y a que deux façons de vivre sa vie : l'une en faisant comme si rien n'était un miracle, l'autre en faisant comme si tout était un miracle.`, author: `Albert Einstein`, tags: ['joie']},
+  {cite: `La faculté de se mettre dans la peau des autres et de réfléchir à la manière dont on agirait à leur place est très utile si on veut apprendre à aimer quelqu'un.`, author: `Dalai Lama`, tags: ['amour']},
+  {cite: `Répands tes bienfaits sur tes amis, pour qu'ils t'aiment plus tendrement encore ; répands-les sur tes ennemis, pour qu'ils deviennent enfin tes amis.`, author: `Cléobus de Lindos`, tags: ['amitié']},
+  {cite: `Souris au monde et le monde te sourira.`, author: `Soeur Emmanuelle`, tags: ['joie']},
+  {cite: `L'humour a non seulement quelque chose de libérateur, mais encore quelque chose de sublime et d'élevé.`, author: `Sigmund Freud`, tags: ['rire']},
   {cite: `On ne voit bien qu'avec le coeur. L'essentiel est invisible pour les yeux.`, author: `Antoine de Saint-Exupéry`},
   {cite: `Seuls les sens peuvent guérir l'âme, tout comme l'âme seule peut guérir les sens.`, author: `Oscar Wilde`},
   {cite: `L'amour n'est pas dans l'autre, il est en nous-mêmes ; nous le réveillons. Mais pour ce réveil, nous avons besoin de l'autre.`, author: `Paulo Coelho`},
@@ -416,6 +416,7 @@ const data: FixtureCiteI[] = [
   {cite: `Les oreilles et les yeux sont les portes et les fenêtres de l'âme.`, author: `Joseph Joubert`},
   {cite: `Quelle flamme pourrait égaler le rayon de soleil d'un jour d'hiver ?.`, author: `Henry David Thoreau`},
   {cite: `Grand est celui qui n'a pas perdu son coeur d'enfant.`, author: `Meng-Tsen`},
+  {cite: `Je cherche les petites notes qui s'aiment`, author: `Wolfgang Amadeus Mozart`},
   // {cite: `.`, author: ``},
 ];
 // 2 juillet / 10 juin
