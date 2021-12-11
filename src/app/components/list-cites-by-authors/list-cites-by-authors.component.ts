@@ -4,11 +4,13 @@ import {ActivatedRoute} from '@angular/router';
 import {Cites} from '../../services/Cites';
 import {tap} from 'rxjs/operators';
 import {Title} from '@angular/platform-browser';
+import {Device} from '../../tools/Device';
 
 @Component({
   selector: 'app-list-cites-by-authors',
   templateUrl: './list-cites-by-authors.component.html',
-  styleUrls: []
+  styleUrls: [],
+  providers: [Device]
 })
 export class ListCitesByAuthorsComponent implements OnInit {
   author: string;
@@ -16,8 +18,16 @@ export class ListCitesByAuthorsComponent implements OnInit {
   protected currentPage: number;
   protected itemsPerPage = 10;
 
-  constructor(protected route: ActivatedRoute, public citeService: Cites, protected title: Title) {
+  constructor(
+    protected route: ActivatedRoute,
+    public citeService: Cites,
+    protected title: Title,
+    protected device: Device
+  ) {
     this.title.setTitle('Citations - Liste des citations');
+    if (device.isMobile()) {
+      this.itemsPerPage = 4;
+    }
   }
 
   ngOnInit(): void {

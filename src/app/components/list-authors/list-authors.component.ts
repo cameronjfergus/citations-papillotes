@@ -3,23 +3,29 @@ import {ActivatedRoute} from '@angular/router';
 import {Authors} from '../../services/Cites/Authors';
 import {AuthorI} from '../../models/Authors';
 import {Title} from '@angular/platform-browser';
+import {Device} from '../../tools/Device';
 
 @Component({
   selector: 'app-list-authors',
   templateUrl: './list-authors.component.html',
-  styleUrls: []
+  styleUrls: [],
+  providers: [Device]
 })
 export class ListAuthorsComponent implements OnInit {
   authors: AuthorI[] = [];
   protected currentPage: number;
-  protected itemsPerPage = 10;
+  protected itemsPerPage = 15;
 
   constructor(
     protected route: ActivatedRoute,
     public authorService: Authors,
-    protected title: Title
+    protected title: Title,
+    protected device: Device
   ) {
     this.title.setTitle('Citations - Liste des auteurs');
+    if (device.isMobile()) {
+      this.itemsPerPage = 10;
+    }
   }
 
   ngOnInit(): void {
