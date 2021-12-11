@@ -14,8 +14,12 @@ export class ListAuthorsComponent implements OnInit {
   protected currentPage: number;
   protected itemsPerPage = 10;
 
-  constructor(protected route: ActivatedRoute, public authorService: Authors, protected title: Title) {
-    this.title.setTitle('Citations - Liste des auteurs')
+  constructor(
+    protected route: ActivatedRoute,
+    public authorService: Authors,
+    protected title: Title
+  ) {
+    this.title.setTitle('Citations - Liste des auteurs');
   }
 
   ngOnInit(): void {

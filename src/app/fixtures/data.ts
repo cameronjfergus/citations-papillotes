@@ -1,12 +1,12 @@
-import {Cite, CiteI} from '../models/Cite';
 import {from, Observable, of} from 'rxjs';
 import {map, switchMap, take, toArray} from 'rxjs/operators';
+import {Cite, CiteI} from '../models/Cite';
 
-interface FixtureCiteI {
+declare type FixtureCiteI = {
   cite: string;
   author: string;
   tags?: string[];
-}
+};
 
 /**
  * This file should be only imported from Service Cites that will simulate a DataStore
@@ -417,6 +417,7 @@ const data: FixtureCiteI[] = [
   {cite: `Quelle flamme pourrait égaler le rayon de soleil d'un jour d'hiver ?.`, author: `Henry David Thoreau`},
   {cite: `Grand est celui qui n'a pas perdu son coeur d'enfant.`, author: `Meng-Tsen`},
   {cite: `Je cherche les petites notes qui s'aiment`, author: `Wolfgang Amadeus Mozart`},
+  {cite: `La vrai générosité envers l'avenir consiste à tout donner au présent.`, author: `Albert Camus`, tags: ['générosité']},
   // {cite: `.`, author: ``},
 ];
 // 2 juillet / 10 juin

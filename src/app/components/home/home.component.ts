@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   cite: CiteI;
 
   constructor(protected citesService: Cites, protected title: Title) {
-    this.title.setTitle('Citations - Citation du jour')
+    this.title.setTitle('Citations - Citation du jour');
   }
 
   ngOnInit(): void {
