@@ -350,11 +350,11 @@ const data: FixtureCiteI[] = [
   {cite: `Être heureux ne signifie pas que tout est parfait. Cela signifie que vous avez décidé de regarder au-delà des imperfections.`, author: `Aristote`},
   {cite: `Seule, je ne peux pas changer le monde, mais je peux jeter une pierre dans l'eau et créer de nombreuses ondulations.`, author: `Mère Teresa`},
   {cite: `Tout ce que les hommes ont fait de beau et de bien, ils l'ont fait avec leurs rêves.`, author: `Bernard Moitessier`},
-  {cite: `Nous n'avons pas besoin de magie pour changer le monde. NBous portons déjà tout le pouvoir dont nous avons besoin à l'intérieur de nous.`, author: `J. K. Rowling`},
-  {cite: `Un seul moment de joie chasse cent moments de tristesse.`, author: `Proverbe chinois`, tags: ['proverbe']},
+  {cite: `Nous n'avons pas besoin de magie pour changer le monde. Nous portons déjà tout le pouvoir dont nous avons besoin à l'intérieur de nous.`, author: `J. K. Rowling`, tags: ['bien-être']},
+  {cite: `Un seul moment de joie chasse cent moments de tristesse.`, author: `Proverbe chinois`, tags: ['proverbe', 'joie']},
   {cite: `N'oubliez pas que la terre se réjouit de sentir vos pieds nus et que les vents joueraient volontiers avec vos cheveux.`, author: `Khalil Gibran`},
   {cite: `Il n'y a pas de honte à préférer le bonheur.`, author: `Albert Camus`},
-  {cite: `Il n'est jamais trop tard pour devenir ce que l'on aurait pu être.`, author: `Georges Eliot`},
+  {cite: `Il n'est jamais trop tard pour devenir ce que l'on aurait pu être.`, author: `George Eliot`},
   {cite: `Va prendre tes leçons dans la nature.`, author: `Léonard de Vinci`},
   {cite: `Le meilleur moment pour planter un arbre, c'était il y a vingt ans. Le second, c'est maintenant.`, author: `Proverbe chinois`, tags: ['proverbe']},
   {cite: `Je ne peux rester sans rien faire...  Je vais faire la sieste.`, author: `Yvan Audouard`},
@@ -418,8 +418,9 @@ const data: FixtureCiteI[] = [
   {cite: `Grand est celui qui n'a pas perdu son coeur d'enfant.`, author: `Meng-Tsen`},
   {cite: `Je cherche les petites notes qui s'aiment`, author: `Wolfgang Amadeus Mozart`},
   {cite: `La vrai générosité envers l'avenir consiste à tout donner au présent.`, author: `Albert Camus`, tags: ['générosité']},
-  // {cite: `.`, author: ``},
-];
+  {cite: `L'été, un éblouissement comme est la neige, Celle qui vient légère et ne dure pas, et rien de nous n'en trouble la lumière D'eau qui s'est condensée puis s'évapore.`, author: `Yves Bonnefoy`, tags: []},
+  // {cite: `.`, author: ``, tags: []},
+  ];
 // 2 juillet / 10 juin
 
 // Because RxJs is the life, so we don't export array, but an Observable. It will be used by the service to share data with the application
