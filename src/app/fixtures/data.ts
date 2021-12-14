@@ -419,6 +419,7 @@ const data: FixtureCiteI[] = [
   {cite: `Je cherche les petites notes qui s'aiment`, author: `Wolfgang Amadeus Mozart`},
   {cite: `La vrai générosité envers l'avenir consiste à tout donner au présent.`, author: `Albert Camus`, tags: ['générosité']},
   {cite: `L'été, un éblouissement comme est la neige, Celle qui vient légère et ne dure pas, et rien de nous n'en trouble la lumière D'eau qui s'est condensée puis s'évapore.`, author: `Yves Bonnefoy`, tags: []},
+  {cite: `Noël n'est pas une saison, c'est un sentiment.`, author: `Edna Ferber`, tags: ['fête']},
   // {cite: `.`, author: ``, tags: []},
   ];
 // 2 juillet / 10 juin
