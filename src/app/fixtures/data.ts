@@ -404,7 +404,7 @@ const data: FixtureCiteI[] = [
   {cite: `La joie prolonge la vie.`, author: `Ben Sira`},
   {cite: `La bouche garde le silence pour écouter parler le coeur.`, author: `Alfred de Musset`},
   {cite: `Il n'y a qu'une sorte d'amour, mais il y en a mille différentes copies.`, author: `François de La Rochefoucauld`},
-  {cite: `La vie est courte, mais le sourire ne prend qu'une seconde.`, author: `Proverbe cubain`, tags: ['proverbe']},
+  {cite: `La vie est courte, mais un sourire ne prend qu'une seconde.`, author: `Proverbe cubain`, tags: ['proverbe']},
   {cite: `Au milieu de l'hiver, j'ai découvert en moi un invincible été.`, author: `Albert Camus`},
   {cite: `Le voyage est un retour vers l'essentiel.`, author: `Proverbe tibétain`, tags: ['proverbe']},
   {cite: `Le bonheur est une petite chose que l'on grignote, assis par terre, au soleil.`, author: `Jean Giraudoux`},
@@ -420,6 +420,7 @@ const data: FixtureCiteI[] = [
   {cite: `La vrai générosité envers l'avenir consiste à tout donner au présent.`, author: `Albert Camus`, tags: ['générosité']},
   {cite: `L'été, un éblouissement comme est la neige, Celle qui vient légère et ne dure pas, et rien de nous n'en trouble la lumière D'eau qui s'est condensée puis s'évapore.`, author: `Yves Bonnefoy`, tags: []},
   {cite: `Noël n'est pas une saison, c'est un sentiment.`, author: `Edna Ferber`, tags: ['fête']},
+  {cite: `Noël est là, ce joyeux noël, des cadeaux plein les bras, qui réchauffe nos coeurs et apporte la joie, jour des plus beaux souvenirs, plus beau jour de l'année.`, author: `Washington Irving`, tags: ['noël']},
   // {cite: `.`, author: ``, tags: []},
   ];
 // 2 juillet / 10 juin
