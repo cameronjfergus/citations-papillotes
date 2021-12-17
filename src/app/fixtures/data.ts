@@ -333,8 +333,8 @@ const data: FixtureCiteI[] = [
   {cite: `Chaque coup de colère est un coup de vieux, chaque sourire est un coup de jeune.`, author: `Proverbe chinois`, tags: ['proverbe']},
   {cite: `La découverte d'un mets nouveau fait plus pour le bonheur du genre humain que la découverte d'une étoile.`, author: `Jean Anthelme Brillat-Savarin`},
   {cite: `La science est le savoir organisé. La sagesse est la vie organisée.`, author: `Emmanuel Kant`},
-  {cite: `Si je rêve tout seul, cela reste un rêve. Si nous rêvons ensemble, c'est le début de la réalité.`, author: `Proverbe persan`, tags: ['pensées positives', 'proverbe']},
-  {cite: `Il n'est pas de joie qui égale celle de se créer de nouvelles amitiés.`, author: `Proverbe chinois`, tags: ['pensées positives', 'proverbe']},
+  {cite: `Si je rêve tout seul, cela reste un rêve. Si nous rêvons ensemble, c'est le début de la réalité.`, author: `Proverbe persan`, tags: ['pensée positive', 'proverbe']},
+  {cite: `Il n'est pas de joie qui égale celle de se créer de nouvelles amitiés.`, author: `Proverbe chinois`, tags: ['pensée positive', 'proverbe']},
   {cite: `L'échec est seulement l'opportunité de recommencer d'une façon plus intelligente.`, author: `Henry Ford`},
   {cite: `N'attendez pas d'être heureux pour sourire. Souriez plutôt afin d'être heureux.`, author: `Edward L. Kramer`},
   {cite: `Cherche un arbre et laisse-lui t'apprendre le calme.`, author: `Eckhart Tolle`},
@@ -423,6 +423,8 @@ const data: FixtureCiteI[] = [
   {cite: `Noël est là, ce joyeux noël, des cadeaux plein les bras, qui réchauffe nos coeurs et apporte la joie, jour des plus beaux souvenirs, plus beau jour de l'année.`, author: `Washington Irving`, tags: ['noël']},
   {cite: `La chose la plus commune, dès qu'on nous la cache, devient un délice.`, author: `Oscar Wilde`, tags: ['curiosité']},
   {cite: `Le bonheur n'est pas chose aisée. Il est très difficile de le trouver en nous, il est impossible de le trouver ailleurs.`, author: `Bouddha`, tags: ['bonheur', 'pensée']},
+  {cite: `Entre amis, il est si beau que le silence soit d'or, mais le rire bon et frais l'est beaucoup plus encore.`, author: `Friederich Nietzsche`, tags: ['amitié']},
+  {cite: `L'art vise à imprimer en nous des sentiments plutôt qu'à les exprimer.`, author: `Henri Bergson`, tags: ['art']},
   // {cite: `.`, author: ``, tags: []},
   ];
 // 2 juillet / 10 juin
