@@ -17,10 +17,14 @@ import { environment } from '../environments/environment';
 import {Click} from './services/Click';
 import {Authors} from './services/Cites/Authors';
 import {ListCitesByAuthorsComponent} from './components/list-cites-by-authors/list-cites-by-authors.component';
+import {NavbarDesktopComponent} from './components/navbar-desktop/navbar-desktop.component';
+import {NavbarMobileComponent} from './components/navbar-mobile/navbar-mobile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarDesktopComponent,
+    NavbarMobileComponent,
     HomeComponent,
     ListCitesComponent,
     ListAuthorsComponent,

@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {Click} from './services/Click';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +6,4 @@ import {Click} from './services/Click';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor(protected click: Click) {}
-
-  public refreshRandom(): void {
-    this.click.click();
-  }
 }
