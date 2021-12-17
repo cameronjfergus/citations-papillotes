@@ -421,6 +421,8 @@ const data: FixtureCiteI[] = [
   {cite: `L'été, un éblouissement comme est la neige, Celle qui vient légère et ne dure pas, et rien de nous n'en trouble la lumière D'eau qui s'est condensée puis s'évapore.`, author: `Yves Bonnefoy`, tags: []},
   {cite: `Noël n'est pas une saison, c'est un sentiment.`, author: `Edna Ferber`, tags: ['fête']},
   {cite: `Noël est là, ce joyeux noël, des cadeaux plein les bras, qui réchauffe nos coeurs et apporte la joie, jour des plus beaux souvenirs, plus beau jour de l'année.`, author: `Washington Irving`, tags: ['noël']},
+  {cite: `La chose la plus commune, dès qu'on nous la cache, devient un délice.`, author: `Oscar Wilde`, tags: ['curiosité']},
+  {cite: `Le bonheur n'est pas chose aisée. Il est très difficile de le trouver en nous, il est impossible de le trouver ailleurs.`, author: `Bouddha`, tags: ['bonheur', 'pensée']},
   // {cite: `.`, author: ``, tags: []},
   ];
 // 2 juillet / 10 juin
