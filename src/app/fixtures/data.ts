@@ -425,6 +425,11 @@ const data: FixtureCiteI[] = [
   {cite: `Le bonheur n'est pas chose aisée. Il est très difficile de le trouver en nous, il est impossible de le trouver ailleurs.`, author: `Bouddha`, tags: ['bonheur', 'pensée']},
   {cite: `Entre amis, il est si beau que le silence soit d'or, mais le rire bon et frais l'est beaucoup plus encore.`, author: `Friederich Nietzsche`, tags: ['amitié']},
   {cite: `L'art vise à imprimer en nous des sentiments plutôt qu'à les exprimer.`, author: `Henri Bergson`, tags: ['art']},
+  {cite: `Les hommes naissent ignorants, pas stupides, la stupidité est le résultat de l'éducation.`, author: `Bertrand Russell`, tags: ['éducation', 'intelligence']},
+  {cite: `Il n'y a rien d'impossible quand on s'aime.`, author: `George Sand`, tags: ['amour']},
+  {cite: `Il n'est pas de joie qui égale celle de se créer de nouvelles amitiés.`, author: `Proverbe japonais`, tags: ['proverbe']},
+  {cite: `Veux-tu vivre heureux ? Voyage avec deux sacs, l'un pour donner, l'autre pour recevoir.`, author: `Johann Wolfgang Von Goethe`, tags: ['bonheur']},
+  {cite: `La véritable indulgence consiste à comprendre et à pardonner les fautes qu'on ne serait pas capable de commettre.`, author: `Victor Hugo`, tags: ['pardon']},
   // {cite: `.`, author: ``, tags: []},
   ];
 // 2 juillet / 10 juin
