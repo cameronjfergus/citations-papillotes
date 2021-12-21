@@ -15,6 +15,7 @@ export class ListAuthorsComponent implements OnInit {
   authors: AuthorI[] = [];
   protected currentPage: number;
   protected itemsPerPage = 15;
+  protected sort: 'text'|'total' = 'text';
 
   constructor(
     protected route: ActivatedRoute,
@@ -29,14 +30,7 @@ export class ListAuthorsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.authorService.authors$.subscribe({
-      next: next => {
-        this.authors = next;
-      },
-      complete: () => {
-        console.info('ListAuthorsComponent completed');
-      }
-    });
+    this.sortByAlpha();
   }
 
   getCurrentPage(): number {
@@ -49,5 +43,31 @@ export class ListAuthorsComponent implements OnInit {
 
   getItemsPerPage(): number {
     return this.itemsPerPage;
+  }
+
+  sortByAlpha(): void {
+    this.sort = 'text';
+    this.authorService.authors$.subscribe(next => this.authors = next);
+  }
+
+  sortByCount(): void {
+    this.sort = 'total';
+    this.authorService.authors$.subscribe(next => this.authors = next.sort((a, b) => {
+      if (a.getCount() > b.getCount()) {
+        return -1;
+      }
+      if (a.getCount() < b.getCount()) {
+        return 1;
+      }
+      return 0;
+    }));
+  }
+
+  isSortByText(): boolean {
+    return this.sort === 'text';
+  }
+
+  isSortByTotal(): boolean {
+    return this.sort === 'total';
   }
 }

@@ -1,14 +1,12 @@
 export interface AuthorI {
-  name: string;
-  count: number;
   getName(): string;
   getCount(): number;
   addCount(): number;
 }
 
 export class Author implements AuthorI {
-  name: string;
-  count: number;
+  private name: string;
+  private count: number;
 
   constructor(name: string, count = 1) {
     this.name = name;
