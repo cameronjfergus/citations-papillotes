@@ -14,7 +14,7 @@ import {Device} from '../../tools/Device';
 export class ListAuthorsComponent implements OnInit {
   authors: AuthorI[] = [];
   protected currentPage: number;
-  protected itemsPerPage = 15;
+  protected itemsPerPage = 13;
   protected sort: 'text'|'total' = 'text';
 
   constructor(
@@ -25,7 +25,7 @@ export class ListAuthorsComponent implements OnInit {
   ) {
     this.title.setTitle('Citations - Liste des auteurs');
     if (device.isMobile()) {
-      this.itemsPerPage = 10;
+      this.itemsPerPage = 8;
     }
   }
 

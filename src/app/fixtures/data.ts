@@ -430,6 +430,11 @@ const data: FixtureCiteI[] = [
   {cite: `Il n'est pas de joie qui égale celle de se créer de nouvelles amitiés.`, author: `Proverbe japonais`, tags: ['proverbe']},
   {cite: `Veux-tu vivre heureux ? Voyage avec deux sacs, l'un pour donner, l'autre pour recevoir.`, author: `Johann Wolfgang Von Goethe`, tags: ['bonheur']},
   {cite: `La véritable indulgence consiste à comprendre et à pardonner les fautes qu'on ne serait pas capable de commettre.`, author: `Victor Hugo`, tags: ['pardon']},
+  {cite: `Le plus grand secret pour le bonheur, c'est d'être bien avec soi.`, author: `Bernard Le Bouyer de Fontenelle`, tags: ['bonheur', 'bien-être']},
+  {cite: `L'amitié double les joies et réduit de moitié les peines.`, author: `Francis Bacon`, tags: ['amitié']},
+  {cite: `Tous les trésors de la terre ne valent pas le bonheur d'être aimé.`, author: `Calderon`, tags: ['amour']},
+  {cite: `Il y a trois sortes de savoir : le savoir proprement dit, le savoir-faire et le savoir-vivre ; les deux derners dispensent assez bien du premier.`, author: `Charles Maurice de Talleyrand-Périgord`, tags: []},
+  // {cite: `.`, author: ``, tags: []},
   // {cite: `.`, author: ``, tags: []},
   ];
 // 2 juillet / 10 juin
