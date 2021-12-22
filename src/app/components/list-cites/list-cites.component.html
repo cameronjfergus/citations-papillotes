@@ -11,7 +11,7 @@
 
   <ul class="list-none">
     <li class="p-1" *ngFor="let item of cites | paginate: { itemsPerPage: getItemsPerPage(), currentPage: getCurrentPage() };">
-      <cite>”{{item.getCite()}}”</cite> de <a routerLink="/authors/{{item.getAuthor()}}">{{item.getAuthor()}}</a>
+      <cite>”{{item.getCite()}}”</cite> de <app-link-cites-by-author [author]="item.getAuthor()"></app-link-cites-by-author>
     </li>
   </ul>
 </div>

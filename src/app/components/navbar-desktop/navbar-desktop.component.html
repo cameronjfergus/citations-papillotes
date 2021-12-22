@@ -1,5 +1,5 @@
 <nav class="flex items-center justify-between p-6 container mx-auto">
-  <a routerLink="/">
+  <a routerLink="/" title="Citation du jour" aria-label="Citation du jour">
     <svg version="1.1" width="200" height="36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <path d="M11.86,16.55a4.31,4.31,0,0,0-2.11.56,14.44,14.44,0,0,1,4.36-6,1.1,1.1,0,0,0-1.4-1.7c-4,3.25-5.78,7.75-5.78,10.54A5.08,5.08,0,0,0,10,24.58a4.4,4.4,0,0,0,1.88.44,4.24,4.24,0,1,0,0-8.47Z"></path><path d="M23,16.55a4.29,4.29,0,0,0-2.11.56,14.5,14.5,0,0,1,4.35-6,1.1,1.1,0,1,0-1.39-1.7c-4,3.25-5.78,7.75-5.78,10.54a5.08,5.08,0,0,0,3,4.61A4.37,4.37,0,0,0,23,25a4.24,4.24,0,1,0,0-8.47Z"></path>
       <rect x="0" y="0" width="200" height="36" fill-opacity="0"/>
@@ -13,7 +13,7 @@
   <app-search class="text-sm text-gray-600 sm:flex"></app-search>
 
   <div class="text-lg hidden lg:flex">
-    <a routerLink="/" title="Citation du jour"
+    <a routerLink="/" title="Citation du jour" aria-label="Citation du jour"
        [queryParams]="" [routerLinkActive]="'focus:text-violet-800'"
        class="block mt-4 lg:inline-block hover:text-violet-800 motion-safe:hover:scale-110 lg:mt-0 mr-10">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +23,7 @@
       </svg>
     </a>
 
-    <a routerLink="/cites" title="Liste des citations"
+    <a routerLink="/cites" title="Liste des citations" aria-label="Liste des citations"
        [queryParams]="" [routerLinkActive]="'focus:text-violet-800'"
        class="block mt-4 lg:inline-block hover:text-violet-800 motion-safe:hover:scale-110 lg:mt-0 mr-10">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +33,7 @@
       </svg>
     </a>
 
-    <a routerLink="/authors" title="Liste des auteurs"
+    <a routerLink="/authors" title="Liste des auteurs" aria-label="Liste des auteurs"
        [queryParams]="" [routerLinkActive]="'focus:text-violet-800'"
        class="block mt-4 lg:inline-block hover:text-violet-800 motion-safe:hover:scale-110 lg:mt-0 mr-10">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,7 +43,7 @@
       </svg>
     </a>
 
-    <a routerLink="/random" title="Une citation au hasard"
+    <a routerLink="/random" title="Une citation au hasard" aria-label="Une citation au hasard"
        [queryParams]="" [routerLinkActive]="'focus:text-violet-800'" (click)="refreshRandom()"
        class="block mt-4 lg:inline-block hover:text-violet-800 motion-safe:hover:scale-110 lg:mt-0 mr-10">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +53,7 @@
       </svg>
     </a>
 
-    <a href="https://github.com/Rebolon/citations-papillotes" title="Accès au code source"
+    <a href="https://github.com/Rebolon/citations-papillotes" title="Accès au code source" aria-label="Accès au code source"
        class="block lg:inline-block hover:text-violet-800 transform motion-safe:hover:scale-110 lg:mt-0 mr-10">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

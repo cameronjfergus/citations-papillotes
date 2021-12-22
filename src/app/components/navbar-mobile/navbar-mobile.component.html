@@ -1,6 +1,6 @@
 <section id="bottom-navigation" class="md:hidden block fixed inset-x-0 bottom-0 z-10 bg-white shadow">
   <div id="tabs" class="flex justify-between">
-    <a routerLink="/"
+    <a routerLink="/" title="Citation du jour" aria-label="Citation du jour"
        [queryParams]="" [routerLinkActive]="'focus:text-violet-800'"
        class="w-full hover:text-stone-500 justify-center inline-block text-center pt-2 pb-1">
       <svg width="25" height="25" viewBox="0 0 42 42" class="inline-block mb-1" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,7 +11,7 @@
       <span class="tab tab-home block text-xs">Aujourd'hui</span>
     </a>
 
-    <a routerLink="/cites"
+    <a routerLink="/cites" title="Liste des citations" aria-label="Liste des citations"
        [queryParams]="" [routerLinkActive]="'focus:text-violet-800'"
        class="w-full hover:text-stone-500 justify-center inline-block text-center pt-2 pb-1">
       <svg width="25" height="25" viewBox="0 0 42 42" class="inline-block mb-1">
@@ -22,7 +22,7 @@
       <span class="tab tab-kategori block text-xs">Citations</span>
     </a>
 
-    <a routerLink="/authors"
+    <a routerLink="/authors" title="Liste des auteurs" aria-label="Liste des auteurs"
        [queryParams]="" [routerLinkActive]="'focus:text-violet-800'"
        class="w-full hover:text-stone-500 justify-center inline-block text-center pt-2 pb-1">
       <svg width="25" height="25" viewBox="0 0 42 42" class="inline-block mb-1">
@@ -33,7 +33,7 @@
       <span class="tab tab-explore block text-xs">Auteurs</span>
     </a>
 
-    <a routerLink="/random"
+    <a routerLink="/random" title="Une citation au hasard" aria-label="Une citation au hasard"
        [queryParams]="" [routerLinkActive]="'focus:text-violet-800'" (click)="refreshRandom()"
        class="w-full hover:text-stone-500 justify-center inline-block text-center pt-2 pb-1">
       <svg width="25" height="25" viewBox="0 0 42 42" class="inline-block mb-1">

@@ -2,5 +2,5 @@
   {{cite.getCite()}}
 </h1>
 <p *ngIf="cite" class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">
-  <a routerLink="/authors/{{cite.getAuthor()}}">{{cite.getAuthor()}}</a>
+  <app-link-cites-by-author [author]="cite.getAuthor()"></app-link-cites-by-author>
 </p>

@@ -7,7 +7,10 @@
   </h1>
 
   <ul class="list-none">
-    <li class="p-1" *ngFor="let item of cites | paginate: { itemsPerPage: getItemsPerPage(), currentPage: getCurrentPage() };"><cite>”{{item.getCite()}}”</cite></li>
+    <li *ngFor="let item of cites | paginate: { itemsPerPage: getItemsPerPage(), currentPage: getCurrentPage() };"
+        class="p-1">
+      <cite>”{{item.getCite()}}”</cite>
+    </li>
   </ul>
 </div>
 
