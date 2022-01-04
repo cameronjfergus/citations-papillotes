@@ -176,7 +176,7 @@ const data: FixtureCiteI[] = [
   {cite: `Si haut que parvienne une chose lancée, c'est à terre qu'elle retourne.`, author: `Proverbe africain`, tags: ['proverbe']},
   {cite: `Hâte-toi de bien vivre et songe que chaque jour est à lui seul une vie.`, author: `Sénèque`},
   {cite: `Tout âge porte ses fruits, il faut savoir les cueillir.`, author: `Raymond Radiguet`},
-  {cite: `Nul devoir n'est plus sous-estimé que celui d'être heureux.`, author: `R. L. Stevenson`},
+  {cite: `Nul devoir n'est plus sous-estimé que celui d'être heureux.`, author: `Robert Louis Stevenson`},
   {cite: `Peu de gens ont le courage d'être lâches devant témoins.`, author: `Théophile Gautier`},
   {cite: `L'or te donne la terre, la terre te donne de l'or.`, author: `Proverbe indien`, tags: ['proverbe']},
   {cite: `Le regard est le médiateur des coeurs.`, author: `Anonyme`},
@@ -292,7 +292,7 @@ const data: FixtureCiteI[] = [
   {cite: `La nature fait les hommes semblables, la vie les rend différents.`, author: `Confucius`},
   {cite: `Une heure de conversation vaut mieux que cinquante lettres.`, author: `Madame de Sévigné`},
   {cite: `Sabot qui brille n'est pas toujours celui qui chausse le mieux.`, author: `Proverbe français`, tags: ['proverbe']},
-  {cite: `Ce qui est haïssable, ne le fait pas à ton prochain ; c'est là toute la loi. Le reste n'est que commentaire.`, author: `R. Hillel`},
+  {cite: `Ce qui est haïssable, ne le fait pas à ton prochain ; c'est là toute la loi. Le reste n'est que commentaire.`, author: `Rabi Hillel`},
   {cite: `Un rire sincère est un rayon de soleil dans une maison.`, author: `William Thackeray`},
   {cite: `Le bonheur c'est un regard, un mot, un sourire pour ceux qui s'aiment.`, author: `Delphine de Girardin`},
   {cite: `Nous sommes plus curieux du sens des rêves que des choses que nous voyons éveillés.`, author: `Diogène`},
@@ -464,7 +464,12 @@ const data: FixtureCiteI[] = [
   {cite: `La colère est comme une avalanche qui se brise sur ce qu'elle brise.`, author: `Sénèque`, tags: []},
   {cite: `Les merveilles naissent sans qu'on les sème.`, author: `Proverbe provençal`, tags: ['proverbe']},
   {cite: `Le silence est un ami qui ne trahit jamais.`, author: `Confucius`, tags: []},
-  //{cite: `.`, author: ``, tags: []},
+  {cite: `Ecrire c'est une façon sans être interrompu.`, author: `Jules Renard`, tags: []},
+  {cite: `Je me moque de savoir beaucoup de choses : je veux savoir des choses que j'aime.`, author: `Jules Renard`, tags: ['connaissance']},
+  {cite: `C'est Noël dans le coeur qui met Noël dans l'air.`, author: `William Thomas Ellis`, tags: ['noël']},
+  {cite: `Un mois avant, un mois après Noël, le froid est bon et naturel.`, author: `Proverbe français`, tags: ['adage', 'proverbe', 'noël']},
+  {cite: `Noël, c'est le printemps de l'esprit ; c'est tout promesse.`, author: `Alain`, tags: ['noël', 'Emile-Auguste Chartier', 'extrait', `Les saisons de l'esprit`]},
+  // {cite: `.`, author: ``, tags: []},
   ];
 // 2 juillet / 10 juin
 
