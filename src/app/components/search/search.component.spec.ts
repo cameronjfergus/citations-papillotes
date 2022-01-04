@@ -20,12 +20,6 @@ describe('SearchComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-citations'`, () => {
-    const fixture = TestBed.createComponent(SearchComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-citations');
-  });
-
   it('should render title', () => {
     const fixture = TestBed.createComponent(SearchComponent);
     fixture.detectChanges();

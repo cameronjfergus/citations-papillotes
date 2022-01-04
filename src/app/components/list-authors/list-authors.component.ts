@@ -14,7 +14,7 @@ import {Device} from '../../tools/Device';
 export class ListAuthorsComponent implements OnInit {
   authors: AuthorI[] = [];
   protected currentPage: number;
-  protected itemsPerPage = 12;
+  protected itemsPerPage = 11;
   protected sort: 'text'|'total' = 'text';
 
   constructor(

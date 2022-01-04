@@ -1,27 +1,31 @@
 import {Component, OnInit} from '@angular/core';
+import {Title} from '@angular/platform-browser';
 import {CiteI} from '../../models/Cite';
 import {Cites} from '../../services/Cites';
-import {Title} from '@angular/platform-browser';
+import {CiteOfTheDay} from '../../tools/CiteOfTheDay.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: []
+  styleUrls: [],
+  providers: [CiteOfTheDay]
 })
 export class HomeComponent implements OnInit {
-  cite: CiteI;
 
-  constructor(protected citesService: Cites, protected title: Title) {
+  constructor(
+    protected citesService: Cites,
+    protected title: Title,
+    protected citeOfTheDay: CiteOfTheDay
+  ) {
     this.title.setTitle('Citations - Citation du jour');
   }
+  cite: CiteI;
 
   ngOnInit(): void {
     this.citesService.cites$.subscribe(next => {
-      const today = new Date();
-      const firstDayOfYear = new Date(today.getFullYear(), 0, 0);
-      const dayOfYear = Math.floor((today.getTime() - firstDayOfYear.getTime()) / 1000 / 60 / 60 / 24);
 
-      this.cite = next[dayOfYear];
+
+      this.cite = this.citeOfTheDay.getCiteOfTheDay(next);
     });
   }
 }
